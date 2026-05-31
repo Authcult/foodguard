@@ -1,0 +1,3708 @@
+[
+  {
+    "name": "山梨酸钾",
+    "name_en": "potassium sorbate",
+    "aliases": [
+      "山梨酸",
+      "2,4-己二烯酸钾"
+    ],
+    "cns": "17.004",
+    "ins": "202",
+    "function": "防腐剂",
+    "risk_level": "safe",
+    "risk_reason": "公认最安全的防腐剂之一，毒性仅为食盐的1/2，在体内可正常代谢为CO₂和水排出。ADI极高，日常摄入很难超标。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "25mg/kg体重(以山梨酸计)",
+    "description": "山梨酸钾是最常见的食品防腐剂，能有效抑制霉菌、酵母菌和好氧性细菌。广泛用于乳制品、肉制品、烘焙食品、饮料等。摄入后在体内参与正常脂肪酸代谢，分解为CO₂和H₂O，无蓄积性。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.075g/kg",
+        "note": "以山梨酸计"
+      },
+      {
+        "food_category": "04.01",
+        "food_name": "干酪",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.01",
+        "food_name": "果蔬汁(浆)",
+        "max_usage": "0.5g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "苯甲酸钠",
+    "name_en": "sodium benzoate",
+    "aliases": [
+      "安息香酸钠",
+      "苯甲酸"
+    ],
+    "cns": "17.002",
+    "ins": "211",
+    "function": "防腐剂",
+    "risk_level": "caution",
+    "risk_reason": "合法防腐剂但存在争议。在酸性条件下可能生成微量苯（致癌物），尤其与维生素C共存时风险增高。虽在国标限量内安全，但部分消费者和儿童食品尽量避免使用。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "5mg/kg体重(以苯甲酸计)",
+    "description": "苯甲酸钠是一种酸性防腐剂，在pH<4.5时效果最佳。成本低廉，广泛用于碳酸饮料、酱油、酱菜等。世界卫生组织将其ADI设定为5mg/kg体重。部分研究表明与抗坏血酸(VC)共存时可能生成苯，因此一些国家限制了其在饮料中的使用。",
+    "usages": [
+      {
+        "food_category": "12.04",
+        "food_name": "酱油",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "04.04.01.01",
+        "food_name": "风味冰",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "阿斯巴甜",
+    "name_en": "aspartame",
+    "aliases": [
+      "天门冬酰苯丙氨酸甲酯",
+      "甜味素",
+      "APM"
+    ],
+    "cns": "19.004",
+    "ins": "951",
+    "function": "甜味剂",
+    "risk_level": "caution",
+    "risk_reason": "2023年WHO/IARC列为2B类可能致癌物（证据有限，与手机辐射同级）。在ADI内对一般人群安全，但苯丙酮尿症(PKU)患者必须严格避免。日常饮食很难达到风险剂量。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "苯丙氨酸"
+    ],
+    "daily_intake_limit": "40mg/kg体重",
+    "description": "阿斯巴甜是一种人工甜味剂，甜度约为蔗糖的200倍。由天冬氨酸和苯丙氨酸两种氨基酸组成，进入体内后分解为这两种氨基酸和甲醇。全球100多个国家批准使用。2023年IARC将其列入2B类致癌物清单，但JECFA维持原有ADI不变，认为正常摄入安全。苯丙酮尿症患者因无法代谢苯丙氨酸必须避免。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.6g/kg",
+        "note": "含苯丙氨酸"
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "3.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "1.7g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "甜蜜素",
+    "name_en": "sodium cyclamate",
+    "aliases": [
+      "环己基氨基磺酸钠",
+      "环拉酸"
+    ],
+    "cns": "19.002",
+    "ins": "952",
+    "function": "甜味剂",
+    "risk_level": "caution",
+    "risk_reason": "多国禁用（美国、日本等）但中国仍允许使用。动物实验显示潜在致癌风险，长期安全性争议较大。建议尽量减少摄入。",
+    "children_safe": false,
+    "pregnancy_safe": false,
+    "allergens": [],
+    "daily_intake_limit": "11mg/kg体重",
+    "description": "甜蜜素是较早开发的合成甜味剂，甜度约为蔗糖的30-80倍。因动物实验显示膀胱癌风险，美国于1970年禁用，日本、英国等多国也相继禁用。中国通过严格限量允许在部分食品中使用。消费者如有选择，建议优选更安全的替代甜味剂。",
+    "usages": [
+      {
+        "food_category": "04.01.02.08.01",
+        "food_name": "蜜饯类",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "04.05.02.01",
+        "food_name": "果冻",
+        "max_usage": "0.65g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "三氯蔗糖",
+    "name_en": "sucralose",
+    "aliases": [
+      "蔗糖素",
+      "三氯半乳蔗糖"
+    ],
+    "cns": "19.016",
+    "ins": "955",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "以蔗糖为原料的半合成甜味剂，不被人体代谢，不产生热量。全球广泛批准，安全性评价充分。无已知致癌性，无明显副作用。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "15mg/kg体重",
+    "description": "三氯蔗糖甜度约为蔗糖的600倍，口感接近蔗糖，无苦味回味。不在体内代谢，几乎全部以原形从粪便和尿液中排出，因此不产生热量。耐热性好，可用于烘焙和烹饪。是目前安全性评价最充分的甜味剂之一。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.25g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "0.5g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "安赛蜜",
+    "name_en": "acesulfame potassium",
+    "aliases": [
+      "乙酰磺胺酸钾",
+      "AK糖"
+    ],
+    "cns": "19.011",
+    "ins": "950",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "不参与代谢，以原形排出体外。全球广泛使用超过30年，安全性评价充分。在国标用量内安全。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "15mg/kg体重",
+    "description": "安赛蜜甜度约为蔗糖的200倍，口感清爽。不被人体代谢，几乎全部以原形从尿液中排出。对热和酸稳定，适合各种食品加工条件。常与阿斯巴甜或三氯蔗糖复配使用以改善口感。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.3g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "2.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "01.02.02",
+        "food_name": "风味发酵乳",
+        "max_usage": "0.35g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "赤藓糖醇",
+    "name_en": "erythritol",
+    "aliases": [
+      "1,2,3,4-丁四醇"
+    ],
+    "cns": "19.018",
+    "ins": "968",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于水果和发酵食品中。几乎不参与代谢，热量接近零。不引起血糖波动，不导致龋齿。安全性评价优秀。唯一需注意：大量摄入可能引起肠胃不适。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "未设定（安全性极高）",
+    "description": "赤藓糖醇是一种天然糖醇，广泛存在于水果、蘑菇和发酵食品中。甜度约为蔗糖的70%，几乎无热量（约0.2kcal/g）。不被口腔细菌利用，不会引起龋齿。GI值为0，适合糖尿病患者。因其天然来源和高安全性，是当前最受欢迎的代糖之一。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "脱氢乙酸钠",
+    "name_en": "sodium dehydroacetate",
+    "aliases": [
+      "脱氢醋酸钠"
+    ],
+    "cns": "17.009(ii)",
+    "ins": "266",
+    "function": "防腐剂",
+    "risk_level": "avoid",
+    "risk_reason": "GB2760-2024大幅缩减使用范围，烘焙食品已禁止使用！因长期摄入可能影响肝肾功能，安全性争议大。新标准下仅允许在腌渍蔬菜等极少数品类使用。",
+    "children_safe": false,
+    "pregnancy_safe": false,
+    "allergens": [],
+    "daily_intake_limit": "已大幅缩限",
+    "description": "脱氢乙酸钠曾广泛用于烘焙食品作为防腐剂。但近年毒理学研究显示长期过量摄入可能对肝肾功能产生影响。GB2760-2024已禁止其在面包、糕点等烘焙食品中使用，仅保留在腌渍蔬菜等少数品类。如果你在食品配料表中看到它，建议谨慎选择。",
+    "usages": [
+      {
+        "food_category": "04.02.02.03",
+        "food_name": "腌渍的蔬菜",
+        "max_usage": "0.3g/kg",
+        "note": "GB2760-2024大幅缩限"
+      }
+    ]
+  },
+  {
+    "name": "亚硝酸钠",
+    "name_en": "sodium nitrite",
+    "aliases": [
+      "亚硝酸盐"
+    ],
+    "cns": "09.002",
+    "ins": "250",
+    "function": "护色剂、防腐剂",
+    "risk_level": "caution",
+    "risk_reason": "本身在限量内安全，但高温煎炸时会与胺类反应生成亚硝胺（确证致癌物）。加工肉制品中的亚硝酸盐是已确认的致癌风险来源之一。建议减少煎炸培根、香肠等。",
+    "children_safe": false,
+    "pregnancy_safe": false,
+    "allergens": [],
+    "daily_intake_limit": "0.07mg/kg体重(以亚硝酸根计)",
+    "description": "亚硝酸钠在肉制品中起护色（保持鲜红色）和抑制肉毒杆菌的双重作用。按国标使用本身是安全的，但问题在于高温烹饪（煎炸、烧烤）时，亚硝酸钠与肉中的胺类物质反应生成亚硝胺，后者是已确认的I类致癌物。建议加工肉制品不要高温煎炸，搭配维生素C丰富的蔬菜可抑制亚硝胺生成。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.15g/kg",
+        "note": "以亚硝酸钠计，残留量≤30mg/kg"
+      },
+      {
+        "food_category": "08.02",
+        "food_name": "腌腊肉制品",
+        "max_usage": "0.15g/kg",
+        "note": "残留量≤30mg/kg"
+      }
+    ]
+  },
+  {
+    "name": "柠檬酸",
+    "name_en": "citric acid",
+    "aliases": [
+      "枸橼酸",
+      "2-羟基丙烷-1,2,3-三羧酸"
+    ],
+    "cns": "01.101",
+    "ins": "330",
+    "function": "酸度调节剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于柑橘类水果中，是人体三羧酸循环的中间产物。安全性极高，无ADI限制。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（安全性极高）",
+    "description": "柠檬酸是自然界分布最广的有机酸之一，柑橘类水果中含量丰富。工业上主要通过黑曲霉发酵糖类制取。在食品中广泛用作酸度调节、防腐、抗氧化增效。是人体正常代谢物，安全性极高。",
+    "usages": [
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "二氧化钛",
+    "name_en": "titanium dioxide",
+    "aliases": [
+      "钛白粉",
+      "CI 77891"
+    ],
+    "cns": "08.011",
+    "ins": "171",
+    "function": "着色剂",
+    "risk_level": "caution",
+    "risk_reason": "欧盟2022年已禁止作为食品添加剂使用（基于基因毒性担忧）。中国目前仍允许使用，但争议较大。建议关注后续政策动态。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "暂无（JECFA原设定为不限量但EU已禁用）",
+    "description": "二氧化钛是白色无机颜料，用于食品中增白、遮盖。2021年EFSA评估认为不能排除其基因毒性和致癌性，欧盟于2022年8月全面禁止作为食品添加剂使用。中国目前仍保留在部分食品类别中的使用许可。",
+    "usages": [
+      {
+        "food_category": "05.03",
+        "food_name": "糖果和巧克力制品包衣",
+        "max_usage": "按生产需要适量使用",
+        "note": "EU已禁用"
+      },
+      {
+        "food_category": "07.03",
+        "food_name": "饼干",
+        "max_usage": "按生产需要适量使用",
+        "note": "仅限装饰性使用"
+      }
+    ]
+  },
+  {
+    "name": "谷氨酸钠",
+    "name_en": "monosodium glutamate",
+    "aliases": [
+      "味精",
+      "MSG",
+      "麸氨酸钠"
+    ],
+    "cns": "12.001",
+    "ins": "621",
+    "function": "增味剂",
+    "risk_level": "safe",
+    "risk_reason": "经过数十年、数百项研究的全面审查，WHO/FAO确认MSG在正常摄入量下对人体安全。所谓中国餐馆综合征已被科学否定。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（安全性极高）",
+    "description": "谷氨酸钠即味精，是谷氨酸的钠盐。谷氨酸是人体蛋白质的组成氨基酸之一，广泛天然存在于番茄、奶酪、海带等食物中。曾被称为中国餐馆综合征的报道已被科学验证否定——双盲试验未能证明MSG与头痛等症状有因果关系。正常烹饪使用完全安全。",
+    "usages": [
+      {
+        "food_category": "12.0",
+        "food_name": "调味品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "5'-呈味核苷酸二钠",
+    "name_en": "disodium 5'-ribonucleotide",
+    "aliases": [
+      "呈味核苷酸二钠",
+      "I+G",
+      "IMP+GMP"
+    ],
+    "cns": "12.004",
+    "ins": "635",
+    "function": "增味剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于所有生物体中，是RNA的组成部分。作为食品添加剂使用安全，通常与味精协同使用增强鲜味。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "呈味核苷酸二钠是5'-肌苷酸二钠(IMP)和5'-鸟苷酸二钠(GMP)的混合物。与味精有强烈协同增效作用——少量添加可使味精鲜味提升数倍。天然存在于肉类、鱼类和菌菇中。",
+    "usages": [
+      {
+        "food_category": "12.0",
+        "food_name": "调味品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "黄原胶",
+    "name_en": "xanthan gum",
+    "aliases": [
+      "汉生胶",
+      "黄单胞菌多糖"
+    ],
+    "cns": "20.009",
+    "ins": "415",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "微生物发酵产生的天然多糖，安全性极高。对健康无害，甚至可作为膳食纤维提供饱腹感。无ADI限制。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "黄原胶是由野油菜黄单胞菌发酵葡萄糖或蔗糖产生的胞外多糖。具有优异的增稠、悬浮、乳化性能，在极低浓度下就能显著增加粘度。不能被人体消化吸收，可视为可溶性膳食纤维。广泛用于调味料、饮料、烘焙食品、无麸质食品等。",
+    "usages": [
+      {
+        "food_category": "12.09",
+        "food_name": "复合调味料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "卡拉胶",
+    "name_en": "carrageenan",
+    "aliases": [
+      "角叉菜胶",
+      "鹿角菜胶"
+    ],
+    "cns": "20.007",
+    "ins": "407",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从红藻中提取的天然多糖。食品级卡拉胶安全性确认，与降解卡拉胶（可能引起炎症）是两种不同物质。JECFA确认食品级卡拉胶安全。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "卡拉胶是从红藻类海藻中提取的天然多糖，主要用于乳制品、肉制品、果冻等中作为胶凝剂和稳定剂。注意区分：食品级卡拉胶是安全的，而降解卡拉胶（poligeenan，一种处理过的形式）才可能存在炎症风险——这是两种不同物质，不要混淆。",
+    "usages": [
+      {
+        "food_category": "01.02.02",
+        "food_name": "风味发酵乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "04.04.01.06",
+        "food_name": "果冻",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "果胶",
+    "name_en": "pectin",
+    "aliases": [],
+    "cns": "20.006",
+    "ins": "440",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于所有水果中（苹果和柑橘皮中含量最高）。是水溶性膳食纤维，对人体有益。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "果胶是存在于植物细胞壁中的天然多糖，苹果渣和柑橘皮是主要商业来源。作为增稠剂和胶凝剂广泛用于果酱、果冻、酸奶等。是一种优质水溶性膳食纤维，有助于降低胆固醇和调节肠道功能。",
+    "usages": [
+      {
+        "food_category": "04.01.02.07",
+        "food_name": "果酱",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "01.02.02",
+        "food_name": "发酵乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "羧甲基纤维素钠",
+    "name_en": "sodium carboxymethyl cellulose",
+    "aliases": [
+      "CMC",
+      "纤维素胶"
+    ],
+    "cns": "20.003",
+    "ins": "466",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "纤维素化学改性产物，不被人体吸收，作为膳食纤维通过消化道。安全记录良好，无ADI限制。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "CMC由天然纤维素经化学改性制成，是应用最广泛的纤维素衍生物之一。具有良好的增稠、悬浮、乳化稳定作用。不被人体消化吸收，随粪便排出，本质上是改性膳食纤维。",
+    "usages": [
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "明胶",
+    "name_en": "gelatin",
+    "aliases": [
+      "动物明胶",
+      "吉利丁"
+    ],
+    "cns": "20.002",
+    "ins": "428",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从动物皮骨中提取的天然蛋白质，与日常食用的肉皮冻本质相同。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "明胶是胶原蛋白的部分水解产物，从猪、牛等动物的皮和骨中提取。主要用于果冻、软糖、冰淇淋等提供凝胶结构和口感。本质上与自制肉皮冻是同一类物质。",
+    "usages": [
+      {
+        "food_category": "04.04.01.06",
+        "food_name": "果冻",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "单，双甘油脂肪酸酯",
+    "name_en": "mono- and diglycerides of fatty acids",
+    "aliases": [
+      "单甘脂",
+      "单硬脂酸甘油酯"
+    ],
+    "cns": "10.006",
+    "ins": "471",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "由甘油和天然脂肪酸合成，在体内正常分解为甘油和脂肪酸。使用历史长，安全记录良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "单双甘油脂肪酸酯是最广泛使用的食品乳化剂之一。由植物油脂与甘油反应制成，在体内分解为正常营养成分。用于面包改善组织、延缓淀粉老化；用于冰淇淋改善膨胀率和口感。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "蔗糖脂肪酸酯",
+    "name_en": "sucrose fatty acid esters",
+    "aliases": [
+      "蔗糖酯",
+      "SE"
+    ],
+    "cns": "10.001",
+    "ins": "473",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "由蔗糖和天然脂肪酸合成，在体内分解为蔗糖和脂肪酸正常代谢。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "30mg/kg体重",
+    "description": "蔗糖脂肪酸酯由蔗糖与食用油脂反应制成，亲水亲油平衡值(HLB)范围广，可满足不同食品体系的乳化需求。对淀粉有特殊作用，能防止面包老化，改善方便面的复水性。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "3.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "1.5g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "二氧化硫",
+    "name_en": "sulfur dioxide",
+    "aliases": [
+      "亚硫酸盐",
+      "硫磺（仅限熏蒸）"
+    ],
+    "cns": "05.001",
+    "ins": "220",
+    "function": "漂白剂、防腐剂、抗氧化剂",
+    "risk_level": "caution",
+    "risk_reason": "对哮喘患者是已知过敏原，可能诱发哮喘发作。在国标限量内对一般人群安全，但敏感人群需警惕。是常见的食品过敏原之一。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "二氧化硫及亚硫酸盐"
+    ],
+    "daily_intake_limit": "0.7mg/kg体重(以SO₂计)",
+    "description": "二氧化硫及亚硫酸盐（包括焦亚硫酸钠、亚硫酸氢钠等）广泛用于果脯蜜饯、葡萄酒、干制蔬菜等的漂白和防腐。对一般人群安全，但对二氧化硫敏感（特别是部分哮喘患者）的人群可能出现过敏反应，包括气喘、头痛等。",
+    "usages": [
+      {
+        "food_category": "04.01.02.08.01",
+        "food_name": "蜜饯类",
+        "max_usage": "0.35g/kg",
+        "note": "以SO₂残留量计"
+      },
+      {
+        "food_category": "15.03.01",
+        "food_name": "葡萄酒",
+        "max_usage": "0.25g/L",
+        "note": "甜型0.4g/L"
+      },
+      {
+        "food_category": "04.02.02.02",
+        "food_name": "干制蔬菜",
+        "max_usage": "0.2g/kg",
+        "note": "以SO₂残留量计"
+      }
+    ]
+  },
+  {
+    "name": "焦亚硫酸钠",
+    "name_en": "sodium metabisulphite",
+    "aliases": [
+      "偏重亚硫酸钠"
+    ],
+    "cns": "05.003",
+    "ins": "223",
+    "function": "漂白剂、防腐剂",
+    "risk_level": "caution",
+    "risk_reason": "同二氧化硫。在食品中分解产生SO₂，对敏感人群是过敏原。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "二氧化硫及亚硫酸盐"
+    ],
+    "daily_intake_limit": "0.7mg/kg体重(以SO₂计)",
+    "description": "焦亚硫酸钠在水中分解产生二氧化硫，起漂白和防腐作用。使用范围和限量同二氧化硫。对亚硫酸盐过敏的人群需注意食品标签上的相关标注。",
+    "usages": [
+      {
+        "food_category": "06.05.02.01",
+        "food_name": "食用淀粉",
+        "max_usage": "0.03g/kg",
+        "note": "以SO₂残留量计"
+      },
+      {
+        "food_category": "07.03",
+        "food_name": "饼干",
+        "max_usage": "0.1g/kg",
+        "note": "以SO₂残留量计"
+      }
+    ]
+  },
+  {
+    "name": "特丁基对苯二酚",
+    "name_en": "tertiary butylhydroquinone",
+    "aliases": [
+      "TBHQ",
+      "叔丁基对苯二酚"
+    ],
+    "cns": "04.007",
+    "ins": "319",
+    "function": "抗氧化剂",
+    "risk_level": "caution",
+    "risk_reason": "高效抗氧化剂，但高剂量动物实验显示一定毒性。在国标限量内使用安全，但日本等部分国家禁用。消费者如有担忧，可注意食品标签。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "0.7mg/kg体重",
+    "description": "TBHQ是合成抗氧化剂，对油脂抗氧化效果优异，尤其适合油炸食品和植物油。安全性存在一定争议——高剂量动物实验显示可能对肝脏产生影响，日本禁用。但欧盟和FDA在限量内仍批准使用。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.2g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "16.07",
+        "food_name": "膨化食品",
+        "max_usage": "0.2g/kg",
+        "note": "以油脂中含量计"
+      }
+    ]
+  },
+  {
+    "name": "丁基羟基茴香醚",
+    "name_en": "butylated hydroxyanisole",
+    "aliases": [
+      "BHA",
+      "丁羟茴香醚"
+    ],
+    "cns": "04.001",
+    "ins": "320",
+    "function": "抗氧化剂",
+    "risk_level": "caution",
+    "risk_reason": "IARC列为2B类可能致癌物（动物实验证据）。虽然ADI内对一般人群安全，但部分消费者和健康倡导者建议避免。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "0.5mg/kg体重",
+    "description": "BHA是合成酚类抗氧化剂，对动物脂肪的抗氧化效果优于植物油。IARC基于动物实验证据将其归为2B类（可能对人类致癌），但JECFA认为在ADI内摄入是安全的。部分制造商已主动停用，转向天然抗氧化剂。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.2g/kg",
+        "note": "与BHT合用时总量≤0.2g/kg"
+      }
+    ]
+  },
+  {
+    "name": "维生素E",
+    "name_en": "vitamin E",
+    "aliases": [
+      "生育酚",
+      "d-α-生育酚",
+      "混合生育酚浓缩物"
+    ],
+    "cns": "04.016",
+    "ins": "307",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "天然抗氧化剂，同时也是人体必需维生素。安全性极高，且有营养价值。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（作为营养素另有推荐量）",
+    "description": "维生素E作为食品添加剂时主要起抗氧化作用，保护油脂不被氧化。是天然存在于植物油、坚果中的营养素。既抗氧化又有营养强化作用，是非常理想的食品添加剂。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "抗坏血酸",
+    "name_en": "ascorbic acid",
+    "aliases": [
+      "维生素C",
+      "VC",
+      "L-抗坏血酸"
+    ],
+    "cns": "04.014",
+    "ins": "300",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "必维生素C，安全性极高。既是抗氧化剂又是营养强化剂。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "维生素C天然存在于水果蔬菜中。作为食品添加剂，主要起抗氧化、护色（防止褐变）和营养强化作用。水溶性维生素，过量会随尿液排出。",
+    "usages": [
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "06.03.02.01",
+        "food_name": "小麦粉",
+        "max_usage": "0.2g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "茶多酚",
+    "name_en": "tea polyphenols",
+    "aliases": [
+      "绿茶提取物",
+      "儿茶素"
+    ],
+    "cns": "04.005",
+    "ins": "",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "天然植物提取物，来自茶叶。有大量健康益处的研究支持（抗氧化、降血脂等）。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "茶多酚是从茶叶中提取的天然多酚类物质，以儿茶素类为主要活性成分。作为食品添加剂主要用于油脂抗氧化，同时具有天然、健康的正面形象。大量研究证明其有多种健康益处。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.4g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.3g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "磷脂",
+    "name_en": "phospholipids",
+    "aliases": [
+      "大豆磷脂",
+      "卵磷脂",
+      "磷脂酰胆碱"
+    ],
+    "cns": "04.010",
+    "ins": "322",
+    "function": "抗氧化剂、乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于所有生物细胞膜中。大豆或蛋黄来源，安全性极高。对婴幼儿神经系统发育有益。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "大豆"
+    ],
+    "daily_intake_limit": "无需设定",
+    "description": "磷脂是构成细胞膜的基础物质，天然存在于蛋黄、大豆等食物中。在食品中既作乳化剂又作抗氧化剂，常见于巧克力（改善流动性）、烘焙食品（延缓老化）等。需要注意的是大豆磷脂对大豆过敏者是过敏原。",
+    "usages": [
+      {
+        "food_category": "05.01",
+        "food_name": "可可制品、巧克力",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "碳酸氢钠",
+    "name_en": "sodium bicarbonate",
+    "aliases": [
+      "小苏打",
+      "苏打粉",
+      "重碳酸钠"
+    ],
+    "cns": "06.001",
+    "ins": "500(ii)",
+    "function": "膨松剂",
+    "risk_level": "safe",
+    "risk_reason": "日常烹饪常用（发面、烘焙），加热分解为碳酸钠、水和CO₂，无有害残留。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "小苏打是每个家庭厨房都会用到的膨松剂，加热时分解产生CO₂使面食蓬松。同时有轻微的酸度调节作用。安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "碳酸钙",
+    "name_en": "calcium carbonate",
+    "aliases": [
+      "石灰石粉",
+      "轻质碳酸钙"
+    ],
+    "cns": "13.006",
+    "ins": "170(i)",
+    "function": "膨松剂、营养强化剂",
+    "risk_level": "safe",
+    "risk_reason": "本身就是钙的补充来源。在体内正常吸收。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "碳酸钙既作膨松剂（与其他酸性物质配合产气）又是广泛使用的钙营养强化剂。自然界中大理石、石灰石的主要成分。用于面粉中作钙强化剂，在口香糖中作填充剂。",
+    "usages": [
+      {
+        "food_category": "06.03.02.01",
+        "food_name": "小麦粉",
+        "max_usage": "0.03g/kg",
+        "note": "作为膨松剂"
+      },
+      {
+        "food_category": "05.02.09",
+        "food_name": "口香糖",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "胭脂红",
+    "name_en": "ponceau 4R",
+    "aliases": [
+      "胭脂红铝色淀",
+      "丽春红4R",
+      "CI 16255"
+    ],
+    "cns": "08.002",
+    "ins": "124",
+    "function": "着色剂",
+    "risk_level": "caution",
+    "risk_reason": "合成色素。在国标限量内使用安全，但部分研究认为合成色素与儿童多动症可能有关联。建议儿童食品尽量少摄入合成色素。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "4mg/kg体重",
+    "description": "胭脂红是合成偶氮类色素，用于赋予食品红色调。2007年南安普顿研究发现多种合成色素与儿童多动症可能存在关联（虽然后续综述未确证因果关系）。欧盟要求含此色素的食品标注可能对儿童注意力和活动有不良影响。建议儿童尽量减少合成色素的摄入。",
+    "usages": [
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "0.05g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.05g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "柠檬黄",
+    "name_en": "tartrazine",
+    "aliases": [
+      "柠檬黄铝色淀",
+      "CI 19140",
+      "酒石黄"
+    ],
+    "cns": "08.005",
+    "ins": "102",
+    "function": "着色剂",
+    "risk_level": "caution",
+    "risk_reason": "合成色素。同胭脂红一样属于南安普顿六色素，可能与儿童行为有关联。此外对阿司匹林过敏者可能有交叉反应。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "10mg/kg体重",
+    "description": "柠檬黄是使用最广泛的黄色合成色素。属于南安普顿研究中与儿童多动症可能相关的六种色素之一。少数对阿司匹林过敏者可能对柠檬黄也有交叉反应。欧盟要求含柠檬黄的食品标注相应警示。",
+    "usages": [
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "0.1g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "0.05g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "日落黄",
+    "name_en": "sunset yellow FCF",
+    "aliases": [
+      "日落黄铝色淀",
+      "CI 15985"
+    ],
+    "cns": "08.006",
+    "ins": "110",
+    "function": "着色剂",
+    "risk_level": "caution",
+    "risk_reason": "合成色素。南安普顿六色素之一。在国标限量内安全但建议减少摄入。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "4mg/kg体重",
+    "description": "日落黄是使用广泛的橙色合成色素。与柠檬黄一样属于南安普顿六色素。在各类饮料、糖果、糕点中常见。建议儿童减少摄入。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.1g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "0.1g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "β-胡萝卜素",
+    "name_en": "beta-carotene",
+    "aliases": [
+      "β-胡萝卜素",
+      "CI 75130"
+    ],
+    "cns": "08.010",
+    "ins": "160a(i),(iii),(iv)",
+    "function": "着色剂",
+    "risk_level": "safe",
+    "risk_reason": "天然色素，同时也是维生素A的前体物质。在体内可转化为维生素A，具有营养价值。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "β-胡萝卜素是自然界最丰富的类胡萝卜素之一，赋予胡萝卜、南瓜等植物橙黄色。作为食品着色剂的同时，可在体内转化为维生素A——是最理想的双重功能添加剂之一。",
+    "usages": [
+      {
+        "food_category": "01.02.02",
+        "food_name": "调制乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "辣椒红",
+    "name_en": "paprika oleoresin",
+    "aliases": [
+      "辣椒红色素",
+      "辣椒油树脂"
+    ],
+    "cns": "08.106",
+    "ins": "160c(ii)",
+    "function": "着色剂",
+    "risk_level": "safe",
+    "risk_reason": "从辣椒中提取的天然色素。安全性极高，无ADI限制。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "辣椒红是从辣椒中提取的天然类胡萝卜素色素，主要成分为辣椒红素和辣椒玉红素。耐热、耐光性良好，广泛用于肉制品、调味料、膨化食品等增红上色。不同于辣椒精，基本不含辣味成分。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "12.09",
+        "food_name": "复合调味料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "红曲红",
+    "name_en": "monascus red",
+    "aliases": [
+      "红曲色素",
+      "红曲红"
+    ],
+    "cns": "08.120",
+    "ins": "",
+    "function": "着色剂",
+    "risk_level": "safe",
+    "risk_reason": "红曲霉发酵生产的天然色素，中国传统食品使用历史悠久（红曲米有千年历史）。安全性高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "红曲红是红曲霉发酵大米产生的天然红色素，在中国有上千年的使用历史（如红曲米用于酿酒、烹肉）。具有良好的耐热性和耐光性。与降脂药物洛伐他汀来源于同一微生物（红曲霉），但食品用红曲色素的发酵菌株通常不产或仅含微量莫纳可林K。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "12.0",
+        "food_name": "调味品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "栀子黄",
+    "name_en": "gardenia yellow",
+    "aliases": [
+      "栀子黄色素",
+      "藏花素"
+    ],
+    "cns": "08.112",
+    "ins": "164",
+    "function": "着色剂",
+    "risk_level": "safe",
+    "risk_reason": "栀子果实提取的天然黄色素。中国传统天然色素，安全性高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "栀子黄是从栀子果实中提取的天然黄色素，主要着色成分为藏花素和藏花酸。在中国和日本有悠久的食品着色使用历史。可用于面制品、糕点、饮料等。",
+    "usages": [
+      {
+        "food_category": "06.03.02.04",
+        "food_name": "生湿面制品",
+        "max_usage": "0.3g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "0.3g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "焦糖色",
+    "name_en": "caramel color",
+    "aliases": [
+      "焦糖色素",
+      "酱色"
+    ],
+    "cns": "08.108",
+    "ins": "150a",
+    "function": "着色剂",
+    "risk_level": "safe",
+    "risk_reason": "糖加热焦化制成，是最古老的天然色素之一。安全性高。注意：氨法焦糖色（III类和IV类）的副产物4-MEI在加州有安全争议。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "200mg/kg体重(I类)；200-300mg/kg体重(II-IV类)",
+    "description": "焦糖色是碳水化合物加热焦化制成的棕色着色剂，是全球产量最大、使用最广泛的食用色素。分为四类：普通焦糖(I)、亚硫酸盐焦糖(II)、氨法焦糖(III)、亚硫酸铵法焦糖(IV)。III类和IV类生产中的副产物4-甲基咪唑(4-MEI)在加州Prop 65下受到关注，但WHO/FAO认为在限定用量内安全。酱油、可乐等深色食品中常见。",
+    "usages": [
+      {
+        "food_category": "12.04",
+        "food_name": "酱油",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": "如可乐类"
+      }
+    ]
+  },
+  {
+    "name": "二氧化硅",
+    "name_en": "silicon dioxide",
+    "aliases": [
+      "微粉硅胶",
+      "无水硅酸"
+    ],
+    "cns": "02.004",
+    "ins": "551",
+    "function": "抗结剂",
+    "risk_level": "safe",
+    "risk_reason": "自然界最丰富的矿物质之一（沙子的主要成分）。不被人体吸收，经消化道原样排出。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "二氧化硅在食品中主要用作抗结剂，防止粉末状食品（如奶粉、调味粉、食盐）结块。化学性质极其稳定，不被人体吸收，随粪便原样排出。",
+    "usages": [
+      {
+        "food_category": "12.01",
+        "food_name": "食盐",
+        "max_usage": "20g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "02.05",
+        "food_name": "其他油脂或油脂制品",
+        "max_usage": "按生产需要适量使用",
+        "note": "仅限植脂末"
+      }
+    ]
+  },
+  {
+    "name": "微晶纤维素",
+    "name_en": "microcrystalline cellulose",
+    "aliases": [
+      "MCC",
+      "纤维素微晶"
+    ],
+    "cns": "02.005",
+    "ins": "460(i)",
+    "function": "抗结剂、增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "纯化木质纤维素，不被人体消化。无毒副作用。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "微晶纤维素由高纯度木质浆粕经酸水解制成。既可以做抗结剂防止粉末结块，又可以做填充剂和增稠剂。本质上是不溶性膳食纤维，安全无虞。",
+    "usages": [
+      {
+        "food_category": "01.06",
+        "food_name": "干酪",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "磷酸三钠",
+    "name_en": "trisodium phosphate",
+    "aliases": [
+      "磷酸钠",
+      "TSP"
+    ],
+    "cns": "15.001",
+    "ins": "339(iii)",
+    "function": "水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "在国标限量内使用安全。主要作用是保水和改善口感。过量摄入磷酸盐可能影响钙磷平衡，但正常饮食不会达到有害剂量。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "70mg/kg体重(以磷计的总磷酸盐)",
+    "description": "磷酸盐类在肉制品中能提高保水性（使火腿、香肠口感更嫩）、在乳制品中起乳化分散作用。磷是人体必需矿物质，但现代饮食中磷酸盐摄入已偏高（加工食品多），建议有肾功能问题的人群注意总磷摄入。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "5.0g/kg",
+        "note": "以磷酸根计"
+      },
+      {
+        "food_category": "01.06.04",
+        "food_name": "再制干酪",
+        "max_usage": "14g/kg",
+        "note": "以磷酸根计"
+      }
+    ]
+  },
+  {
+    "name": "三聚磷酸钠",
+    "name_en": "sodium tripolyphosphate",
+    "aliases": [
+      "STPP",
+      "三磷酸钠"
+    ],
+    "cns": "15.003",
+    "ins": "451(i)",
+    "function": "水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "与磷酸三钠类似。国标限量内安全，但肾功能不全者需控制总磷摄入。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "70mg/kg体重(以磷计的总磷酸盐)",
+    "description": "三聚磷酸钠是最常用的肉类保水剂之一，与肌肉蛋白结合后大幅提升保水性，使加工肉制品口感更嫩滑。也被用于海产品加工防止解冻后水分流失。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "5.0g/kg",
+        "note": "以磷酸根计"
+      },
+      {
+        "food_category": "09.05",
+        "food_name": "水产品罐头",
+        "max_usage": "1.0g/kg",
+        "note": "以磷酸根计"
+      }
+    ]
+  },
+  {
+    "name": "乳酸链球菌素",
+    "name_en": "nisin",
+    "aliases": [
+      "尼生素",
+      "乳链菌肽"
+    ],
+    "cns": "17.019",
+    "ins": "234",
+    "function": "防腐剂",
+    "risk_level": "safe",
+    "risk_reason": "乳酸链球菌发酵产生的天然多肽类防腐剂，在消化道中被酶降解为氨基酸。安全性极高，是清洁标签的理想选择。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "33000单位/kg体重",
+    "description": "乳酸链球菌素是唯一被批准作为食品防腐剂的细菌素（由乳酸链球菌产生）。主要抑制革兰氏阳性菌（包括肉毒杆菌和李斯特菌），对革兰氏阴性菌无效。在人体消化道被蛋白酶降解为氨基酸，无残留，安全性卓越。常用于乳制品和肉制品。",
+    "usages": [
+      {
+        "food_category": "01.06",
+        "food_name": "干酪",
+        "max_usage": "0.5g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.5g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "纳他霉素",
+    "name_en": "natamycin",
+    "aliases": [
+      "匹马霉素",
+      "游霉素"
+    ],
+    "cns": "17.030",
+    "ins": "235",
+    "function": "防腐剂",
+    "risk_level": "safe",
+    "risk_reason": "链霉菌发酵产生的天然抗真菌剂。不被消化道吸收。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "0.3mg/kg体重",
+    "description": "纳他霉素由纳塔尔链霉菌发酵产生，是专一性的抗真菌剂（对细菌和病毒无效）。主要用于干酪、肉制品表面处理防止霉菌生长。口服几乎不被吸收，安全性好。",
+    "usages": [
+      {
+        "food_category": "01.06",
+        "food_name": "干酪",
+        "max_usage": "0.3g/kg",
+        "note": "表面处理，残留量<10mg/kg"
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "0.3g/kg",
+        "note": "表面处理"
+      }
+    ]
+  },
+  {
+    "name": "乳酸",
+    "name_en": "lactic acid",
+    "aliases": [
+      "2-羟基丙酸",
+      "奶酸"
+    ],
+    "cns": "01.102",
+    "ins": "270",
+    "function": "酸度调节剂",
+    "risk_level": "safe",
+    "risk_reason": "人体正常代谢产物（肌肉运动产生乳酸）。天然存在于发酵食品中。安全性无可争议。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "乳酸是自然界最简单的羟基酸之一，由乳酸菌发酵糖类产生，广泛天然存在于酸奶、泡菜、酸面包等发酵食品中。在食品中用作酸度调节和防腐。也是人体在无氧运动时糖酵解的产物。安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "01.02.02",
+        "food_name": "发酵乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "苹果酸",
+    "name_en": "malic acid",
+    "aliases": [
+      "DL-苹果酸",
+      "2-羟基丁二酸"
+    ],
+    "cns": "01.104",
+    "ins": "296",
+    "function": "酸度调节剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于苹果等水果中，是人体三羧酸循环的中间产物。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "苹果酸天然存在于苹果、葡萄、山楂等水果中，是苹果酸味的来源。工业上可从水果提取或化学合成。在食品中除调节酸度外，还能增强水果风味。人体正常代谢物，安全性极高。",
+    "usages": [
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "碳酸氢铵",
+    "name_en": "ammonium bicarbonate",
+    "aliases": [
+      "臭粉",
+      "重碳酸铵",
+      "食臭粉"
+    ],
+    "cns": "06.002",
+    "ins": "503(ii)",
+    "function": "膨松剂",
+    "risk_level": "safe",
+    "risk_reason": "传统膨松剂，加热分解为氨气、CO₂和水蒸气，无有害残留。虽然分解会产生氨气味，但烘焙后完全挥发，不影响食用安全。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "碳酸氢铵是传统的烘焙膨松剂（广式月饼、桃酥等传统糕点中常用）。加热时完全分解为NH₃、CO₂和水蒸气，不留任何固体残留，因此做出来的饼干特别酥脆。虽然烘烤时有氨气味，但完全挥发后不影响食用安全。",
+    "usages": [
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.03",
+        "food_name": "饼干",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "海藻酸钠",
+    "name_en": "sodium alginate",
+    "aliases": [
+      "褐藻酸钠",
+      "藻酸钠"
+    ],
+    "cns": "20.004",
+    "ins": "401",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从褐藻中提取的天然多糖。不被人体消化吸收，是可溶性膳食纤维。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "海藻酸钠从褐藻（海带、巨藻等）中提取，是褐藻细胞壁的主要成分。具有独特的凝胶性能——与钙离子接触时立即凝胶（分子料理中的球化技术常用）。在食品中用作增稠剂、稳定剂和胶凝剂。",
+    "usages": [
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "琼脂",
+    "name_en": "agar",
+    "aliases": [
+      "洋菜",
+      "寒天",
+      "琼胶"
+    ],
+    "cns": "20.001",
+    "ins": "406",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从红藻中提取的天然多糖。基本不被人体消化，是天然膳食纤维。日本传统食品使用数百年。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "琼脂从石花菜等红藻中提取，在日本已有数百年使用历史（寒天）。具有独特的凝胶特性：在90°C以上溶解、40°C以下凝胶，且凝胶在室温不融化。是果冻、布丁的理想凝胶剂。基本不提供热量，是天然膳食纤维。",
+    "usages": [
+      {
+        "food_category": "04.04.01.06",
+        "food_name": "果冻",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "槐豆胶",
+    "name_en": "locust bean gum",
+    "aliases": [
+      "刺槐豆胶",
+      "角豆胶"
+    ],
+    "cns": "20.023",
+    "ins": "410",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从刺槐豆种子提取的天然多糖胶。与黄原胶有协同增效作用。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "槐豆胶从地中海地区的刺槐豆种子胚乳中提取。单独使用时增稠效果有限，但与黄原胶混合后产生强烈协同增效（凝胶强度远超各自单独使用）。在冰淇淋和冷冻甜品中广泛使用，防止冰晶形成，改善口感。",
+    "usages": [
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "01.02.02",
+        "food_name": "发酵乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "瓜尔胶",
+    "name_en": "guar gum",
+    "aliases": [
+      "瓜尔豆胶",
+      "胍胶"
+    ],
+    "cns": "20.025",
+    "ins": "412",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从瓜尔豆提取的天然多糖。水溶性膳食纤维，安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "瓜尔胶从瓜尔豆（主要产于印度和巴基斯坦）种子中提取。是冷水可溶的增稠剂，在低浓度下就能产生高粘度。在冰淇淋中防冰晶、在烘焙食品中改良质构、在饮料中提供悬浮稳定性。同时也是可溶性膳食纤维。",
+    "usages": [
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "06.03.02.04",
+        "food_name": "生湿面制品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "木糖醇",
+    "name_en": "xylitol",
+    "aliases": [
+      "木戊糖醇"
+    ],
+    "cns": "19.007",
+    "ins": "967",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于多种水果蔬菜中。不引起血糖波动，不导致龋齿（反而有防龋作用）。安全性良好。大量摄入可能引起肠胃不适。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（大量摄入可能有缓泻作用）",
+    "description": "木糖醇天然存在于草莓、花椰菜、桦树皮等多种植物中，甜度与蔗糖相当。代谢不依赖胰岛素，GI值极低(7)，对血糖几乎无影响。最突出的特性是防龋齿——口腔细菌无法利用木糖醇产酸，反而能抑制致龋菌。广泛用于无糖口香糖和口腔护理产品。注意：大量摄入（>50g/天）可能有缓泻作用。",
+    "usages": [
+      {
+        "food_category": "05.02.09",
+        "food_name": "口香糖",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "甜菊糖苷",
+    "name_en": "steviol glycosides",
+    "aliases": [
+      "甜菊糖",
+      "甜菊提取物",
+      "甜菊醇糖苷"
+    ],
+    "cns": "19.008",
+    "ins": "960",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "从甜叶菊中提取的天然甜味剂，南美洲有数百年使用历史。无热量、不升血糖、不导致龋齿。安全性评价充分。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "4mg/kg体重(以甜菊醇当量计)",
+    "description": "甜菊糖苷从原产南美洲的甜叶菊中提取，当地原住民使用已有数百年。甜度约为蔗糖的200-300倍，无热量。对血糖无影响，适合糖尿病患者。有些产品会有轻微的甘草后味，近年来通过酶改性和发酵技术改良的后味已有大幅改善。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.2g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "1.0g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "罗汉果甜苷",
+    "name_en": "mogrosides",
+    "aliases": [
+      "罗汉果提取物",
+      "罗汉果甜"
+    ],
+    "cns": "19.015",
+    "ins": "",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "中国传统药食同源植物（罗汉果）的提取物。天然、无热量。安全性高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "罗汉果甜苷从广西特产的罗汉果中提取，在中国有数百年药食同源使用历史。甜度约为蔗糖的300倍，主要甜味成分为 Mogroside V。零热量，不影响血糖。唯一的味道特征是带有独特的果香后味。是清洁标签和天然食品的理想甜味来源。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "三氯半乳蔗糖",
+    "name_en": "sucralose",
+    "aliases": [
+      "蔗糖素",
+      "三氯蔗糖"
+    ],
+    "cns": "19.016",
+    "ins": "955",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "同上三氯蔗糖条目。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "15mg/kg体重",
+    "description": "同三氯蔗糖。甜度约蔗糖600倍，不被代谢，耐热稳定性好。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.25g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "聚葡萄糖",
+    "name_en": "polydextrose",
+    "aliases": [
+      "聚糊精"
+    ],
+    "cns": "20.022",
+    "ins": "1200",
+    "function": "增稠剂、填充剂",
+    "risk_level": "safe",
+    "risk_reason": "合成的水溶性膳食纤维。不被消化吸收，热量极低。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（大量可能有缓泻作用）",
+    "description": "聚葡萄糖是由葡萄糖、山梨糖醇和柠檬酸高温聚合而成的水溶性膳食纤维。热量仅为1kcal/g。在食品中既作填充剂（替代糖和脂肪的体积）又作增稠剂和保湿剂。是低糖、低脂食品中的常见成分。",
+    "usages": [
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "异抗坏血酸钠",
+    "name_en": "sodium erythorbate",
+    "aliases": [
+      "异维生素C钠",
+      "异VC钠",
+      "D-异抗坏血酸钠"
+    ],
+    "cns": "04.018",
+    "ins": "316",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "维生素C的异构体，抗氧化效果相近但无维生素活性。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "5mg/kg体重",
+    "description": "异抗坏血酸钠是抗坏血酸(VC)的立体异构体，抗氧化性能与VC相当但自身无维生素C的生理活性。在肉制品中主要起护色和抗氧化作用，同时能抑制亚硝胺的生成（与VC协同）。安全性良好。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.5g/kg",
+        "note": "以抗坏血酸计"
+      },
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "0.15g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "柠檬酸钠",
+    "name_en": "sodium citrate",
+    "aliases": [
+      "枸橼酸钠",
+      "2-羟基丙烷-1,2,3-三羧酸钠"
+    ],
+    "cns": "01.303",
+    "ins": "331(iii)",
+    "function": "酸度调节剂、稳定剂",
+    "risk_level": "safe",
+    "risk_reason": "柠檬酸的钠盐，在体内正常代谢。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "柠檬酸钠是柠檬酸的钠盐，在食品中用作酸度缓冲剂、乳化稳定剂。在乳制品中防止蛋白质凝固（如再制干酪的乳化盐），在饮料中调节酸味的柔和感。是人体正常代谢物，安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "01.06.04",
+        "food_name": "再制干酪",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "食用香料",
+    "name_en": "food flavorings",
+    "aliases": [
+      "食用香精",
+      "食品用香料",
+      "天然香料",
+      "合成香料"
+    ],
+    "cns": "",
+    "ins": "",
+    "function": "食品用香料",
+    "risk_level": "safe",
+    "risk_reason": "食添类别中监管最严的类型之一。在自限性用量下使用（多了味道反而不佳）。绝大多数在极低浓度下使用，安全性有保障。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "自限性使用",
+    "description": "食品用香料是品种最多的食品添加剂类别（GB2760收录超过1800种），包括天然提取物（香草提取物、柑橘油等）和合成香料（香兰素、乙基麦芽酚等）。由于香气强度极高，实际用量极低（ppm级），且具有自限性（过量味道反而不佳），因此安全性有天然保障。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性使用"
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性使用"
+      }
+    ]
+  },
+  {
+    "name": "乙基麦芽酚",
+    "name_en": "ethyl maltol",
+    "aliases": [
+      "乙基麦芽酚"
+    ],
+    "cns": "A3001",
+    "ins": "",
+    "function": "食品用香料",
+    "risk_level": "safe",
+    "risk_reason": "食品用香料，增香效果极强但用量极低（ppm级），安全性有保障。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "自限性使用",
+    "description": "乙基麦芽酚是合成香料中的明星品种，甜香和焦糖香气浓郁，增香效果是麦芽酚的4-6倍。广泛应用于饮料、糖果、烘焙食品和肉制品中。因用量极低（通常在10-100ppm级别），安全性高。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性"
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性"
+      }
+    ]
+  },
+  {
+    "name": "香兰素",
+    "name_en": "vanillin",
+    "aliases": [
+      "香草醛",
+      "香兰醛",
+      "甲基香兰素"
+    ],
+    "cns": "S0476 / A1259",
+    "ins": "",
+    "function": "食品用香料",
+    "risk_level": "safe",
+    "risk_reason": "香草的主要香气成分。天然存在或人工合成，化学结构完全相同。安全性评价充分。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "自限性使用",
+    "description": "香兰素是香草豆的特征香气成分，天然存在于香草豆中。因天然香草产量极低（全球仅能满足约1%需求），目前主要使用化学合成或生物发酵法生产的香兰素（化学上与天然完全相同的物质）。是世界上使用量最大的食用香料之一。",
+    "usages": [
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性"
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": "自限性"
+      }
+    ]
+  },
+  {
+    "name": "麦芽糖醇",
+    "name_en": "maltitol",
+    "aliases": [
+      "氢化麦芽糖"
+    ],
+    "cns": "19.005",
+    "ins": "965(i)",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "淀粉水解氢化制成的糖醇。不导致龋齿，血糖反应低。安全性良好。大量摄入可能有缓泻作用。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（大量可能有缓泻作用）",
+    "description": "麦芽糖醇由麦芽糖氢化制成，甜度约为蔗糖的90%，口感最接近蔗糖（基本无后味）。热量约为蔗糖的一半，GI值低。广泛用于无糖巧克力、无糖糖果和烘焙食品。与其他糖醇一样，大量（>100g/天）摄入可能导致肠胃不适。",
+    "usages": [
+      {
+        "food_category": "05.01.02",
+        "food_name": "巧克力",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "山梨糖醇",
+    "name_en": "sorbitol",
+    "aliases": [
+      "山梨醇",
+      "D-山梨糖醇"
+    ],
+    "cns": "19.006",
+    "ins": "420(i)",
+    "function": "甜味剂、水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于苹果、梨等水果中。不导致龋齿，血糖反应低。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（大量可能有缓泻作用）",
+    "description": "山梨糖醇天然存在于蔷薇科水果（苹果、梨、李子等）中。甜度约为蔗糖的60%，具有清凉口感和保湿性。在食品中既作甜味剂又作水分保持剂（防止糕点干燥变硬、保持半湿状态）。是口香糖和无糖糖果中最常用的甜味剂之一。",
+    "usages": [
+      {
+        "food_category": "05.02.09",
+        "food_name": "口香糖",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "甘油",
+    "name_en": "glycerol",
+    "aliases": [
+      "丙三醇",
+      "甘油醇"
+    ],
+    "cns": "15.014",
+    "ins": "422",
+    "function": "水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "人体正常代谢物（脂肪的基本组成部分）。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "甘油是脂肪分子的骨架（甘油三酯的组成部分），天然存在于所有动植物油脂中。在食品中主要用作保湿剂（保持糕点、糖果柔软湿润）和溶剂（食用香料的载体）。是人体能正常代谢的最简单三元醇，安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "硬脂酰乳酸钠",
+    "name_en": "sodium stearoyl lactylate",
+    "aliases": [
+      "SSL",
+      "硬脂酰乳酰乳酸钠"
+    ],
+    "cns": "10.011",
+    "ins": "481(i)",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "由硬脂酸和乳酸制成的乳化剂。在体内正常分解。安全记录良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "20mg/kg体重",
+    "description": "SSL是面包工业最重要的乳化剂之一，能强化面筋网络、增加面包体积、延缓老化（保持柔软）。由食用脂肪酸和乳酸反应制成，在消化系统中正常分解。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "2.0g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "2.0g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "酪蛋白酸钠",
+    "name_en": "sodium caseinate",
+    "aliases": [
+      "酪朊酸钠",
+      "乳蛋白酸钠"
+    ],
+    "cns": "10.002",
+    "ins": "",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "牛奶蛋白的钠盐。除非对牛奶过敏，否则完全安全。是优质蛋白质来源。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "牛奶（乳制品）"
+    ],
+    "daily_intake_limit": "无需设定",
+    "description": "酪蛋白酸钠是牛奶中主要蛋白质（酪蛋白）的钠盐形式，具有良好的乳化性和起泡性。用于咖啡伴侣（植脂末）、冰淇淋、肉制品等改善口感和乳化稳定性。对牛奶过敏者需要注意（标签上通常标注为乳蛋白或酪蛋白）。",
+    "usages": [
+      {
+        "food_category": "02.05",
+        "food_name": "植脂末",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "双乙酰酒石酸单双甘油酯",
+    "name_en": "diacetyl tartaric acid esters of mono- and diglycerides",
+    "aliases": [
+      "DATEM",
+      "双乙酰酒石酸甘油酯"
+    ],
+    "cns": "10.010",
+    "ins": "472e",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "甘油酯衍生物，在体内正常分解。使用历史长，安全记录良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "50mg/kg体重",
+    "description": "DATEM是面包工业的核心乳化剂，主要作用是强化面筋（与面筋蛋白形成复合物），大幅增加面包体积和柔软度。是面包改良剂的关键成分。由天然脂肪酸和酒石酸反应制成。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "10g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "改性大豆磷脂",
+    "name_en": "modified soybean phospholipids",
+    "aliases": [
+      "酶解大豆磷脂",
+      "羟化大豆卵磷脂"
+    ],
+    "cns": "10.019",
+    "ins": "",
+    "function": "乳化剂",
+    "risk_level": "safe",
+    "risk_reason": "大豆磷脂的改性产品，改善了亲水性。安全性与普通磷脂相同。对大豆过敏者需注意。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [
+      "大豆"
+    ],
+    "daily_intake_limit": "无需设定",
+    "description": "改性大豆磷脂通过酶解或化学改性提高了普通磷脂的亲水性（HLB值更高），在水包油型乳化体系中效果更好。广泛用于巧克力（改善流动性）、速溶粉（改善分散性）等。对大豆过敏者需留意。",
+    "usages": [
+      {
+        "food_category": "05.01",
+        "food_name": "巧克力及巧克力制品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "01.06.04",
+        "food_name": "再制干酪",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "乙酰化二淀粉磷酸酯",
+    "name_en": "acetylated distarch phosphate",
+    "aliases": [
+      "ADSP",
+      "乙酰化双淀粉磷酸酯"
+    ],
+    "cns": "20.015",
+    "ins": "1414",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "淀粉的化学改性产品。不被人体完整吸收（如同抗性淀粉）。安全性评价充分。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "乙酰化二淀粉磷酸酯是经过交联和乙酰化双重改性的淀粉。相比天然淀粉，具有更好的耐热性、耐酸性和抗剪切能力。广泛用于调味酱、酸奶、馅料等需要耐加工和耐储存的食品中。是安全性评价最充分的改性淀粉之一。",
+    "usages": [
+      {
+        "food_category": "12.09",
+        "food_name": "复合调味料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "01.02.02",
+        "food_name": "发酵乳",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "羟丙基二淀粉磷酸酯",
+    "name_en": "hydroxypropyl distarch phosphate",
+    "aliases": [
+      "HDP"
+    ],
+    "cns": "20.016",
+    "ins": "1442",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "同上，改性淀粉类。安全性评价充分。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "羟丙基二淀粉磷酸酯是另一种广泛使用的交联改性淀粉，通过羟丙基化和磷酸盐交联赋予淀粉优异的冻融稳定性和抗老化能力。在冷冻食品（速冻水饺、汤圆馅料）和冷藏乳制品中广泛应用，防止反复冻融导致的析水和质构劣变。",
+    "usages": [
+      {
+        "food_category": "03.01",
+        "food_name": "冰淇淋",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "12.09",
+        "food_name": "复合调味料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "羟丙基甲基纤维素",
+    "name_en": "hydroxypropyl methyl cellulose",
+    "aliases": [
+      "HPMC",
+      "羟丙甲纤维素"
+    ],
+    "cns": "20.028",
+    "ins": "464",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "纤维素衍生物，不被人体吸收。无毒副作用，安全记录良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "HPMC是纤维素经甲基化和羟丙基化得到的非离子型纤维素醚。独特之处是具有热凝胶性（加热时形成凝胶、冷却后恢复液体），在素食烘焙、无麸质面包等特殊食品中用作结构剂。也广泛用于植物胶囊（素食胶囊）的制作。",
+    "usages": [
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "结冷胶",
+    "name_en": "gellan gum",
+    "aliases": [
+      "吉兰糖胶",
+      "结兰胶"
+    ],
+    "cns": "20.027",
+    "ins": "418",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "微生物发酵产生的多糖。在极低浓度下就能形成凝胶。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "结冷胶由少动鞘氨醇单胞菌发酵产生。效率极高——0.1%浓度就能形成坚实的凝胶。形成的凝胶透明、口感清爽，在植物基饮品（如杏仁奶、燕麦奶）中用作悬浮稳定剂，防止颗粒沉淀。在低糖或无糖果冻中也有广泛应用。",
+    "usages": [
+      {
+        "food_category": "04.04.01.06",
+        "food_name": "果冻",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "阿拉伯胶",
+    "name_en": "gum arabic",
+    "aliases": [
+      "金合欢胶",
+      "阿拉伯树胶"
+    ],
+    "cns": "20.008",
+    "ins": "414",
+    "function": "增稠剂",
+    "risk_level": "safe",
+    "risk_reason": "从金合欢树中提取的天然树胶，使用历史悠久。是可溶性膳食纤维。安全性极高。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "阿拉伯胶从非洲金合欢树的树胶分泌物中采集，是人类最早使用的天然胶之一（古埃及已用于制作木乃伊和食品）。具有卓越的乳化稳定性，是可乐类饮料中香精油的乳化稳定剂（防止香精上浮）。同时也是优良的可溶性膳食纤维。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": "如可乐乳化香精"
+      },
+      {
+        "food_category": "05.02",
+        "food_name": "糖果",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "偶氮甲酰胺",
+    "name_en": "azodicarbonamide",
+    "aliases": [
+      "ADA",
+      "偶氮二甲酰胺"
+    ],
+    "cns": "",
+    "ins": "927a",
+    "function": "面粉处理剂",
+    "risk_level": "avoid",
+    "risk_reason": "GB2760-2024已删除此品种！其在烘焙过程中可能产生氨基脲（致癌物）。中国已不再允许作为食品添加剂使用。",
+    "children_safe": false,
+    "pregnancy_safe": false,
+    "allergens": [],
+    "daily_intake_limit": "中国已禁用",
+    "description": "偶氮甲酰胺曾用作面粉增筋剂，在面团中氧化面筋蛋白的巯基，增强面筋网络。然而其在面粉熟化和烘焙过程中可能产生氨基脲（semicarbazide），后者在高剂量动物实验中显示致癌性。中国及欧盟已不再允许其在食品中使用。如果你在配料表中看到它，说明产品不合规。",
+    "usages": [
+      {
+        "food_category": "已删除",
+        "food_name": "中国已不再允许使用",
+        "max_usage": "禁用",
+        "note": "GB2760-2024已删除"
+      }
+    ]
+  },
+  {
+    "name": "硫酸钙",
+    "name_en": "calcium sulfate",
+    "aliases": [
+      "石膏",
+      "生石膏",
+      "CaSO4"
+    ],
+    "cns": "18.001",
+    "ins": "516",
+    "function": "稳定剂和凝固剂",
+    "risk_level": "safe",
+    "risk_reason": "传统豆腐凝固剂（中国使用数千年）。安全性极高。同时提供钙质。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "硫酸钙即食品级石膏，是中国传统豆腐制作中最常用的凝固剂（南豆腐用石膏、北豆腐用盐卤）。在豆制品中使大豆蛋白凝固成型。同时使用的钙能被人体部分吸收，是钙的补充来源。安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "04.04.01.04",
+        "food_name": "豆类制品",
+        "max_usage": "按生产需要适量使用",
+        "note": "如豆腐"
+      },
+      {
+        "food_category": "06.03.02.01",
+        "food_name": "小麦粉",
+        "max_usage": "1.5g/kg",
+        "note": "作为营养强化剂"
+      }
+    ]
+  },
+  {
+    "name": "葡萄糖酸-δ-内酯",
+    "name_en": "glucono delta-lactone",
+    "aliases": [
+      "GDL",
+      "葡萄糖酸内酯"
+    ],
+    "cns": "18.007",
+    "ins": "575",
+    "function": "稳定剂和凝固剂",
+    "risk_level": "safe",
+    "risk_reason": "葡萄糖衍生物，在水中缓慢水解为葡萄糖酸。是内酯豆腐的凝固剂。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "葡萄糖酸-δ-内酯在水中缓慢水解为葡萄糖酸，从而使pH逐渐降低、蛋白质凝固。是内酯豆腐（盒装嫩豆腐）的凝固剂，优点是凝固过程均匀缓慢，做出的豆腐特别嫩滑。实质上就是葡萄糖酸的酯化形式，水解产物全部是人体正常代谢物。",
+    "usages": [
+      {
+        "food_category": "04.04.01.04",
+        "food_name": "豆类制品",
+        "max_usage": "按生产需要适量使用",
+        "note": "如内酯豆腐"
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "氯化钾",
+    "name_en": "potassium chloride",
+    "aliases": [
+      "KCl",
+      "钾盐"
+    ],
+    "cns": "00.008",
+    "ins": "508",
+    "function": "其他",
+    "risk_level": "safe",
+    "risk_reason": "食盐的替代品，在低钠盐中部分替代氯化钠。对一般人群安全，但肾功能不全者需遵医嘱控制钾摄入。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定（肾功能不全者需注意）",
+    "description": "氯化钾在食品中最重要的用途是作为食盐替代品——在低钠盐中部分替代NaCl，帮助降低钠摄入（对高血压人群有益）。本身是人体必需的电解质。唯一需要注意的是，肾功能严重不全者排钾能力下降，需控制钾的摄入，这类人群应在医生指导下选择食盐产品。",
+    "usages": [
+      {
+        "food_category": "12.01",
+        "food_name": "食盐",
+        "max_usage": "350g/kg",
+        "note": "仅限低钠盐"
+      },
+      {
+        "food_category": "12.0",
+        "food_name": "调味品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "二丁基羟基甲苯",
+    "name_en": "butylated hydroxytoluene",
+    "aliases": [
+      "BHT",
+      "二叔丁基对甲酚"
+    ],
+    "cns": "04.002",
+    "ins": "321",
+    "function": "抗氧化剂",
+    "risk_level": "caution",
+    "risk_reason": "同BHA类似。在ADI内安全，但高剂量动物实验显示一些影响。与BHA常复配使用。",
+    "children_safe": false,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "0.3mg/kg体重",
+    "description": "BHT与BHA是最经典的合成抗氧化剂搭档，常复配使用以实现互补抗氧化效果。BHT对植物油的抗氧化效果优于BHA。高剂量动物实验显示可能影响肝脏酶活性和甲状腺功能，但在ADI内人类使用安全。部分消费者倾向于避免。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.2g/kg",
+        "note": "与BHA合用时总量≤0.2g/kg"
+      },
+      {
+        "food_category": "16.07",
+        "food_name": "膨化食品",
+        "max_usage": "0.2g/kg",
+        "note": "以油脂中含量计"
+      }
+    ]
+  },
+  {
+    "name": "ε-聚赖氨酸",
+    "name_en": "ε-polylysine",
+    "aliases": [
+      "聚赖氨酸",
+      "ε-多聚赖氨酸"
+    ],
+    "cns": "17.037",
+    "ins": "",
+    "function": "防腐剂",
+    "risk_level": "safe",
+    "risk_reason": "链霉菌发酵产生的天然多肽。在消化道中被降解为赖氨酸（人体必需氨基酸）。安全性极高，是清洁标签的理想选择。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "暂无（安全性高）",
+    "description": "ε-聚赖氨酸由白色链霉菌发酵产生的天然抗菌多肽（25-35个赖氨酸残基）。广谱抑制革兰氏阳性和阴性菌、酵母和霉菌。在消化道被胰蛋白酶降解为赖氨酸——一种人体必需氨基酸。这是最理想的食品防腐剂类型：天然、安全、有效。在日本已使用多年，近年来在中国使用也日益广泛。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.15g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "0.15g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "维生素C",
+    "name_en": "vitamin C",
+    "aliases": [
+      "抗坏血酸",
+      "L-抗坏血酸"
+    ],
+    "cns": "04.014",
+    "ins": "300",
+    "function": "抗氧化剂、营养强化剂",
+    "risk_level": "safe",
+    "risk_reason": "见抗坏血酸条目。人体必需维生素，安全性无可争议。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "同抗坏血酸。作为营养强化剂时用于补充VC，作为抗氧化剂时保护食品色泽和营养。是最理想的食品添加剂之一——兼具功能和营养双重价值。",
+    "usages": [
+      {
+        "food_category": "14.02.03",
+        "food_name": "果蔬汁饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "迷迭香提取物",
+    "name_en": "rosemary extract",
+    "aliases": [
+      "迷迭香酸",
+      "鼠尾草酸"
+    ],
+    "cns": "04.017",
+    "ins": "",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "从迷迭香中提取的天然抗氧化剂。在欧洲有悠久的烹饪使用历史。安全性高，且具有正面消费者认知。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "迷迭香提取物的主要抗氧化成分是鼠尾草酸和迷迭香酸，对油脂的抗氧化效果优于合成抗氧化剂BHA/BHT。在欧盟被广泛用于替代合成抗氧化剂，是天然食品防腐的标杆之一。消费者接受度远高于合成抗氧化剂。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.7g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "0.3g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "乳酸钾",
+    "name_en": "potassium lactate",
+    "aliases": [
+      "2-羟基丙酸钾"
+    ],
+    "cns": "15.011",
+    "ins": "326",
+    "function": "水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "乳酸的钾盐。在体内正常代谢。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "乳酸钾是乳酸的钾盐，在肉制品中用作保水剂和防腐增效剂（降低水分活度）。与乳酸钠功能相似但对钠摄入控制更友好。也是人体正常代谢物。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "30g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "焦磷酸钠",
+    "name_en": "tetrasodium pyrophosphate",
+    "aliases": [
+      "TSPP",
+      "焦磷酸四钠"
+    ],
+    "cns": "15.004",
+    "ins": "450(iii)",
+    "function": "水分保持剂",
+    "risk_level": "safe",
+    "risk_reason": "磷酸盐类。限量内使用安全。肾功能不全者需控制总磷摄入。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "70mg/kg体重(以磷计的总磷酸盐)",
+    "description": "焦磷酸钠是肉制品中常用的磷酸盐之一，与其他磷酸盐（三聚磷酸钠、六偏磷酸钠）复配使用效果最佳。主要作用是提高肉制品的保水性和嫩度。与肌肉蛋白的钙离子螯合也起一定作用。",
+    "usages": [
+      {
+        "food_category": "08.03",
+        "food_name": "熟肉制品",
+        "max_usage": "5.0g/kg",
+        "note": "以磷酸根计"
+      }
+    ]
+  },
+  {
+    "name": "蔗糖素",
+    "name_en": "sucralose",
+    "aliases": [
+      "三氯蔗糖"
+    ],
+    "cns": "19.016",
+    "ins": "955",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "同三氯蔗糖。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "15mg/kg体重",
+    "description": "同三氯蔗糖条目。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "0.25g/kg",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "纽甜",
+    "name_en": "neotame",
+    "aliases": [
+      "尼甜",
+      "纽甜素"
+    ],
+    "cns": "19.019",
+    "ins": "961",
+    "function": "甜味剂",
+    "risk_level": "safe",
+    "risk_reason": "阿斯巴甜的衍生物，甜度更高但用量更低。PKU患者也不再需要限制（产生的苯丙氨酸极微量）。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "2mg/kg体重",
+    "description": "纽甜是阿斯巴甜的N-烷基化衍生物，甜度约为蔗糖的7000-13000倍——是已批准使用甜度最高的甜味剂。因用量极低（ppm级），其分解产生的苯丙氨酸量微乎其微，因此不再需要针对苯丙酮尿症患者标注警示。在实际食品中的使用量极少，安全性余量极大。",
+    "usages": [
+      {
+        "food_category": "14.02.02",
+        "food_name": "风味饮料",
+        "max_usage": "按生产需要适量使用",
+        "note": "极低用量(ppm级)"
+      }
+    ]
+  },
+  {
+    "name": "丙酸钙",
+    "name_en": "calcium propionate",
+    "aliases": [
+      "丙酸钙盐"
+    ],
+    "cns": "17.005",
+    "ins": "282",
+    "function": "防腐剂",
+    "risk_level": "safe",
+    "risk_reason": "天然存在于发酵食品和人体肠道（丙酸是短链脂肪酸）。安全性良好，同时提供钙质。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "丙酸钙是面包和烘焙食品中最常用的防霉剂，对霉菌和好氧芽孢杆菌（造成面包拉丝）有特效。丙酸天然存在于人体肠道中（肠道菌发酵膳食纤维产生），是一种短链脂肪酸，对人体有益。丙酸钙在体内分解为丙酸和钙离子，两项都正常代谢和吸收。",
+    "usages": [
+      {
+        "food_category": "07.01",
+        "food_name": "面包",
+        "max_usage": "2.5g/kg",
+        "note": "以丙酸计"
+      },
+      {
+        "food_category": "07.02",
+        "food_name": "糕点",
+        "max_usage": "2.5g/kg",
+        "note": "以丙酸计"
+      }
+    ]
+  },
+  {
+    "name": "抗坏血酸棕榈酸酯",
+    "name_en": "ascorbyl palmitate",
+    "aliases": [
+      "VC棕榈酸酯",
+      "L-抗坏血酸棕榈酸酯"
+    ],
+    "cns": "04.011",
+    "ins": "304",
+    "function": "抗氧化剂",
+    "risk_level": "safe",
+    "risk_reason": "维生素C与棕榈酸的酯化物，兼具VC的抗氧化活性和脂溶性。在体内分解为VC和棕榈酸。安全性良好。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "1.25mg/kg体重(以抗坏血酸硬脂酸酯计)",
+    "description": "抗坏血酸棕榈酸酯是脂溶性的VC衍生物，解决了一般VC在水中溶解而不能保护油脂的问题。在植物油和含油食品中起抗氧化作用。在体内被酯酶分解为VC和棕榈酸，分别作为维生素和脂肪酸正常代谢。",
+    "usages": [
+      {
+        "food_category": "02.01",
+        "food_name": "食用油脂",
+        "max_usage": "0.2g/kg",
+        "note": ""
+      },
+      {
+        "food_category": "01.03",
+        "food_name": "乳粉",
+        "max_usage": "0.2g/kg",
+        "note": "以脂肪中含量计"
+      }
+    ]
+  },
+  {
+    "name": "辣椒油树脂",
+    "name_en": "capsicum oleoresin",
+    "aliases": [
+      "辣椒精",
+      "辣椒提取物"
+    ],
+    "cns": "00.011",
+    "ins": "160c",
+    "function": "增味剂、着色剂",
+    "risk_level": "safe",
+    "risk_reason": "从辣椒中提取的天然成分。安全性极高。注意与辣椒红区分——辣椒油树脂含辣味成分（辣椒素）。",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "无需设定",
+    "description": "辣椒油树脂是辣椒中脂溶性成分的提取物，包含辣椒红（色素）和辣椒素（辣味成分）。与单纯的辣椒红不同，辣椒油树脂同时提供色泽和辣味。常用于需要标准化辣度的食品（辣条、辣酱、火锅底料等）。安全性毋庸置疑。",
+    "usages": [
+      {
+        "food_category": "12.09",
+        "food_name": "复合调味料",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      },
+      {
+        "food_category": "16.07",
+        "food_name": "膨化食品",
+        "max_usage": "按生产需要适量使用",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "5’-呈味核苷酸二钠（又名呈味核苷酸二钠）",
+    "cns": "12.004",
+    "ins": "635",
+    "function": "增味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "5’-肌苷酸二钠",
+    "cns": "12.003",
+    "ins": "631",
+    "function": "增味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "5’-鸟苷酸二钠",
+    "cns": "12.002",
+    "ins": "627",
+    "function": "增味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "D-异抗坏血酸及其钠盐（包括D-异抗坏血酸，D-异抗坏血酸钠）",
+    "cns": "04.004,04.018",
+    "ins": "315,316",
+    "function": "抗氧化剂、护色剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "DL-苹果酸",
+    "cns": "01.309",
+    "ins": "296",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "DL-苹果酸钠",
+    "cns": "01.314",
+    "ins": "350（ii）",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "L-苹果酸",
+    "cns": "01.104",
+    "ins": "",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "L-苹果酸钠",
+    "cns": "01.315",
+    "ins": "",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "α-环状糊精",
+    "cns": "18.011",
+    "ins": "457",
+    "function": "稳定剂、增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "γ-环状糊精",
+    "cns": "18.012",
+    "ins": "458",
+    "function": "稳定剂、增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "半乳甘露聚糖",
+    "cns": "00.014",
+    "ins": "",
+    "function": "其他",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "冰乙酸（低压羰基化法）",
+    "cns": "01.112",
+    "ins": "",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "冰乙酸（又名冰醋酸）",
+    "cns": "01.107",
+    "ins": "260",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "醋酸酯淀粉",
+    "cns": "20.039",
+    "ins": "1420",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "甘油（又名丙三醇）",
+    "cns": "15.014",
+    "ins": "422",
+    "function": "水分保持剂、乳化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "柑橘黄",
+    "cns": "08.143",
+    "ins": "",
+    "function": "着色剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "高粱红",
+    "cns": "08.115",
+    "ins": "",
+    "function": "着色剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "海藻酸钾（又名褐藻酸钾）",
+    "cns": "20.005",
+    "ins": "402",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "海藻酸钠（又名褐藻酸钠）",
+    "cns": "20.004",
+    "ins": "401",
+    "function": "增稠剂、稳定剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "槐豆胶（又名刺槐豆胶）",
+    "cns": "20.023",
+    "ins": "410",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "黄原胶（又名汉生胶）",
+    "cns": "20.009",
+    "ins": "415",
+    "function": "稳定剂、增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "甲基纤维素",
+    "cns": "20.043",
+    "ins": "461",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "聚丙烯酸钠",
+    "cns": "20.036",
+    "ins": "",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "抗坏血酸（又名维生素C）",
+    "cns": "04.014",
+    "ins": "300",
+    "function": "面粉处理剂、抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "抗坏血酸钙",
+    "cns": "04.009",
+    "ins": "302",
+    "function": "抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "抗坏血酸钠",
+    "cns": "04.015",
+    "ins": "301",
+    "function": "抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "酪蛋白酸钠（又名酪朊酸钠）",
+    "cns": "10.002",
+    "ins": "",
+    "function": "乳化剂、其他",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "磷酸酯双淀粉",
+    "cns": "20.034",
+    "ins": "1412",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "酶解大豆磷脂",
+    "cns": "10.040",
+    "ins": "",
+    "function": "乳化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "柠檬酸钾",
+    "cns": "01.304",
+    "ins": "332(ii)",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "柠檬酸一钠",
+    "cns": "01.306",
+    "ins": "331(i)",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "柠檬酸脂肪酸甘油酯",
+    "cns": "10.032",
+    "ins": "472c",
+    "function": "乳化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "葡萄糖酸钠",
+    "cns": "01.312",
+    "ins": "576",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "羟丙基淀粉",
+    "cns": "20.014",
+    "ins": "1440",
+    "function": "增稠剂、膨松剂、乳化剂、稳定剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "羟丙基甲基纤维素（简称“HPMC”）",
+    "cns": "20.028",
+    "ins": "464",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "乳酸钠",
+    "cns": "15.012",
+    "ins": "325",
+    "function": "水分保持剂、酸度调节剂、抗氧化剂、膨松剂、增稠剂、稳定剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "乳酸脂肪酸甘油酯",
+    "cns": "10.031",
+    "ins": "472b",
+    "function": "乳化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "乳糖醇（又名4－β－D吡喃半乳糖－D－山梨醇）",
+    "cns": "19.014",
+    "ins": "966",
+    "function": "乳化剂、稳定剂、增稠剂、甜味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "酸处理淀粉",
+    "cns": "20.032",
+    "ins": "1401",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "碳酸钙（包括轻质碳酸钙，重质碳酸钙）",
+    "cns": "13.006",
+    "ins": "170(i)",
+    "function": "膨松剂、面粉处理剂、稳定剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "碳酸钾",
+    "cns": "01.301",
+    "ins": "501(i)",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "碳酸钠",
+    "cns": "01.302",
+    "ins": "500(i)",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "碳酸氢钾",
+    "cns": "01.307",
+    "ins": "501(ii)",
+    "function": "酸度调节剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "天然胡萝卜素",
+    "cns": "08.147",
+    "ins": "160a(ii)",
+    "function": "着色剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "甜菜红",
+    "cns": "08.101",
+    "ins": "162",
+    "function": "着色剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "辛烯基琥珀酸淀粉钠",
+    "cns": "10.030",
+    "ins": "1450",
+    "function": "乳化剂，其他",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "氧化淀粉",
+    "cns": "20.030",
+    "ins": "1404",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "氧化羟丙基淀粉",
+    "cns": "20.033",
+    "ins": "",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "乙酰化单、双甘油脂肪酸酯",
+    "cns": "10.027",
+    "ins": "472a",
+    "function": "乳化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "乙酰化双淀粉己二酸酯",
+    "cns": "20.031",
+    "ins": "1422",
+    "function": "增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "阿斯巴甜（又名天门冬酰苯丙氨酸甲酯）",
+    "cns": "19.004",
+    "ins": "951",
+    "function": "甜味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "茶多酚（又名维多酚，简称“TP”）",
+    "cns": "04.005",
+    "ins": "",
+    "function": "抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "磷酸及磷酸盐[包括磷酸，焦磷酸二氢二钠，焦磷酸钠，磷酸二氢钙，磷酸二氢钾，磷酸氢二铵，磷酸氢二钾，磷酸氢钙，磷酸三钙，磷酸三钾，磷酸三钠，多聚磷酸钠（包括六偏磷酸钠），三聚磷酸钠，磷酸二氢钠，磷酸氢二钠，焦磷酸四钾，焦磷酸一氢三钠，聚偏磷酸钾，酸式焦磷酸钙]",
+    "cns": "01.106,15.008,15.004,15.007,15.010,06.008,15.009,06.006,02.003,01.308,15.001,15.002,15.003,15.005,15.006,15.017,15.013,15.015,15.016",
+    "ins": "338,450(i),450(iii),341(i),340(i),342(ii),340(ii),341(ii),341(iii),340(iii),339(iii),452(i),451(i),339(i),339(ii),450(v),450(ii),452(ii),450(vii)",
+    "function": "水分保持剂、膨松剂、酸度调节剂、稳定剂、凝固剂、抗结剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "纽甜（又名N-[N-（3，3-二甲基丁基）]-L-α-天门冬氨-L-苯丙氨酸1-甲酯）",
+    "cns": "19.019",
+    "ins": "961",
+    "function": "甜味剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "普鲁兰多糖",
+    "cns": "14.011",
+    "ins": "1204",
+    "function": "被膜剂、增稠剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "山梨酸及其钾盐（包括山梨酸，山梨酸钾）",
+    "cns": "17.003,17.004",
+    "ins": "200,202",
+    "function": "防腐剂、抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  },
+  {
+    "name": "茶黄素",
+    "cns": "04.023",
+    "ins": "",
+    "function": "抗氧化剂",
+    "name_en": "",
+    "aliases": [],
+    "risk_level": "safe",
+    "risk_reason": "数据来源于 GB2760-2024，尚未进行人工安全性审核",
+    "children_safe": true,
+    "pregnancy_safe": true,
+    "allergens": [],
+    "daily_intake_limit": "",
+    "description": "",
+    "usages": []
+  }
+]

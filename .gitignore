@@ -1,0 +1,35 @@
+# .env — 包含 API Key，绝对不能提交
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# 向量数据库（持久化数据，太大）
+data/chroma_db/
+
+# 模型文件（太大，约 2.2GB）
+data/models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.log

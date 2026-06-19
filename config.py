@@ -20,18 +20,34 @@ CHROMA_DB_DIR = DATA_DIR / "chroma_db"
 PROMPTS_DIR = PROJECT_ROOT / "src" / "prompts"
 
 # ============================================================
-# LLM 配置 (DeepSeek)
+# LLM 配置
 # ============================================================
+# LLM 后端：ollama 或 deepseek
+LLM_BACKEND = os.getenv("LLM_BACKEND", "ollama")
+
+# Ollama 配置（本地部署，默认）
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:4b")
+
+# DeepSeek 配置（云端 API，备用）
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
 DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
+
 LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.3"))
 
 # ============================================================
-# Embedding 模型配置 (BGE-M3)
+# Embedding 模型配置
 # ============================================================
+# Embedding 后端：ollama 或 huggingface
+EMBEDDING_BACKEND = os.getenv("EMBEDDING_BACKEND", "ollama")
+
+# Ollama Embedding（默认）
+OLLAMA_EMBEDDING_MODEL = os.getenv("OLLAMA_EMBEDDING_MODEL", "bge-m3:latest")
+
+# HuggingFace Embedding（备用，需要下载模型）
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "BAAI/bge-m3")
-EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "cpu")  # 本地开发用 cpu
+EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "cpu")
 
 # ============================================================
 # ChromaDB 配置

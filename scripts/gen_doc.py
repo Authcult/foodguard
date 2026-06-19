@@ -307,7 +307,9 @@ for filename, desc in files:
 doc.add_paragraph('')
 doc.add_paragraph('— 文档结束 —').alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-# 保存
-output_path = r'd:\食品配料智能分析agent\食鉴_FoodGuard_项目详解.docx'
+# 保存到项目根目录
+import os
+output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "食鉴_FoodGuard_项目详解.docx")
 doc.save(output_path)
 print(f'Word 文档已生成: {output_path}')

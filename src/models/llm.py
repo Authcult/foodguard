@@ -1,16 +1,16 @@
 """
 LLM 初始化模块
 
-使用 DeepSeek API，通过 langchain-openai 的 ChatOpenAI 兼容接口调用。
+支持两种后端：
+  1. Ollama（本地部署，默认）— 使用 qwen3:4b 等本地模型
+  2. DeepSeek（云端 API）— 使用 DeepSeek API
 
-DeepSeek 兼容 OpenAI 接口格式，只需设置：
-  - base_url: https://api.deepseek.com
-  - api_key:  你的 DeepSeek API Key
-  - model:    deepseek-chat（或 deepseek-reasoner）
+通过 config.LLM_BACKEND 切换。
 """
-import os
-from langchain_openai import ChatOpenAI
 from config import (
+    LLM_BACKEND,
+    OLLAMA_BASE_URL,
+    OLLAMA_MODEL,
     DEEPSEEK_API_KEY,
     DEEPSEEK_BASE_URL,
     DEEPSEEK_MODEL,
@@ -19,24 +19,45 @@ from config import (
 )
 
 
-def get_llm(temperature: float = None) -> ChatOpenAI:
+def get_llm(temperature: float = None):
     """
-    获取 DeepSeek LLM 实例。
+    获取 LLM 实例。
+
+    根据 config.LLM_BACKEND 自动选择 Ollama 或 DeepSeek。
 
     参数:
-        temperature: 生成温度，默认使用配置值。解读类场景建议 0.1-0.3（更准确），
-                     创意类场景建议 0.5-0.7。
+        temperature: 生成温度，默认使用配置值
 
     返回:
-        ChatOpenAI 实例，实际调用 DeepSeek API。
-
-    使用示例:
-        from src.models.llm import get_llm
-        llm = get_llm()
-        response = llm.invoke("请解释安赛蜜是什么")
+        ChatOllama 或 ChatOpenAI 实例
     """
     if temperature is None:
         temperature = LLM_TEMPERATURE
+
+    if LLM_BACKEND == "ollama":
+        return _get_ollama_llm(temperature)
+    elif LLM_BACKEND == "deepseek":
+        return _get_deepseek_llm(temperature)
+    else:
+        raise ValueError(f"不支持的 LLM 后端: {LLM_BACKEND}，可选: ollama, deepseek")
+
+
+def _get_ollama_llm(temperature: float):
+    """初始化 Ollama LLM"""
+    from langchain_ollama import ChatOllama
+
+    llm = ChatOllama(
+        model=OLLAMA_MODEL,
+        base_url=OLLAMA_BASE_URL,
+        temperature=temperature,
+    )
+    logger.info(f"LLM 初始化完成 (Ollama): model={OLLAMA_MODEL}, base_url={OLLAMA_BASE_URL}")
+    return llm
+
+
+def _get_deepseek_llm(temperature: float):
+    """初始化 DeepSeek LLM（云端 API）"""
+    from langchain_openai import ChatOpenAI
 
     if not DEEPSEEK_API_KEY:
         raise ValueError(
@@ -49,12 +70,6 @@ def get_llm(temperature: float = None) -> ChatOpenAI:
         base_url=DEEPSEEK_BASE_URL,
         api_key=DEEPSEEK_API_KEY,
         temperature=temperature,
-        # DeepSeek 特有参数
-        model_kwargs={
-            # deepseek-chat 支持的最大 token 数
-            # "max_tokens": 4096,
-        },
     )
-
-    logger.info(f"LLM 初始化完成: model={DEEPSEEK_MODEL}, base_url={DEEPSEEK_BASE_URL}")
+    logger.info(f"LLM 初始化完成 (DeepSeek): model={DEEPSEEK_MODEL}, base_url={DEEPSEEK_BASE_URL}")
     return llm

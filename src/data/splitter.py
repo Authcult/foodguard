@@ -8,11 +8,12 @@
   - IdentitySplitter: 不做任何分割，直接返回原 Document（默认使用）
   - 保留扩展空间，未来可以按添加剂描述、使用范围等分块
 """
+import logging
 from typing import Iterator
 
 from langchain_core.documents import Document
 
-logger = __import__("logging").getLogger("foodguard.splitter")
+logger = logging.getLogger("foodguard.splitter")
 
 
 class IdentitySplitter:

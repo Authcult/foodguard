@@ -10,35 +10,16 @@
   3. LLM: 生成回答
 """
 import logging
-from pathlib import Path
 
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-from config import PROMPTS_DIR
+from src.chains.base import load_prompt_template, format_aliases, format_allergens
 
 logger = logging.getLogger("foodguard.interpret_chain")
 
 
-# ============================================================
-# Prompt 模板加载
-# ============================================================
-# 从 .md 文件加载 Prompt 模板。你也可以直接在代码中写 Prompt 字符串。
-def _load_prompt_template(filename: str) -> str:
-    """从 prompts 目录加载 Markdown 格式的 Prompt 模板"""
-    prompt_path = PROMPTS_DIR / filename
-    if prompt_path.exists():
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
-    else:
-        logger.warning(f"Prompt 文件不存在: {prompt_path}，使用内置默认模板")
-        return _get_default_interpret_prompt()
-
-
-def _get_default_interpret_prompt() -> str:
-    """内置默认 Prompt 模板（当 .md 文件不可用时）"""
-    return """你是一位食品配料分析专家。
+_DEFAULT_INTERPRET_PROMPT = """你是一位食品配料分析专家。
 
 根据以下知识库信息，用通俗易懂的语言向消费者解读食品配料。
 
@@ -91,7 +72,7 @@ def build_interpret_chain(llm, vectorstore):
     )
 
     # 2. 加载 Prompt 模板
-    prompt_template = _load_prompt_template("interpret.md")
+    prompt_template = load_prompt_template("interpret.md", _DEFAULT_INTERPRET_PROMPT)
     prompt = ChatPromptTemplate.from_template(prompt_template)
 
     # 3. 格式化检索结果的函数
@@ -108,7 +89,7 @@ def build_interpret_chain(llm, vectorstore):
                 f"【条目 {i}】\n"
                 f"名称：{meta.get('name', '')}\n"
                 f"英文：{meta.get('name_en', '')}\n"
-                f"别名：{'、'.join(meta.get('aliases', []))}\n"
+                f"别名：{format_aliases(meta)}\n"
                 f"CNS：{meta.get('cns', '')} | INS：{meta.get('ins', '')}\n"
                 f"功能：{meta.get('function', '')}\n"
                 f"风险等级：{meta.get('risk_level', '')}\n"
@@ -116,7 +97,7 @@ def build_interpret_chain(llm, vectorstore):
                 f"儿童安全：{'是' if meta.get('children_safe') else '否'} | "
                 f"孕妇安全：{'是' if meta.get('pregnancy_safe') else '否'}\n"
                 f"每日限量：{meta.get('daily_intake_limit', '')}\n"
-                f"过敏原：{'、'.join(meta.get('allergens', [])) or '无'}\n"
+                f"过敏原：{format_allergens(meta)}\n"
                 f"---\n{doc.page_content}"
             )
         return "\n\n".join(formatted)

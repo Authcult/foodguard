@@ -44,7 +44,7 @@ def set_user_profile(profile):
 # ============================================================
 
 @tool
-def interpret_additives(question: str) -> str:
+def interpret_additives(question: str, chat_history: str = "") -> str:
     """
     解读食品配料。输入用户关于食品配料的疑问（如配料表文本或具体配料名），
     返回通俗易懂的解读，包括每个配料的作用、安全性、限量等。
@@ -55,7 +55,11 @@ def interpret_additives(question: str) -> str:
 
     logger.info(f"工具调用: interpret_additives, question={question[:80]}...")
     try:
-        result = _interpret_chain.invoke({"question": question})
+        # 如果有对话历史，附加到问题中提供上下文
+        full_question = question
+        if chat_history:
+            full_question = f"对话历史：\n{chat_history}\n\n当前问题：{question}"
+        result = _interpret_chain.invoke({"question": full_question})
         return result
     except Exception as e:
         logger.error(f"interpret_additives 调用失败: {e}")
@@ -63,7 +67,7 @@ def interpret_additives(question: str) -> str:
 
 
 @tool
-def check_risk(question: str) -> str:
+def check_risk(question: str, chat_history: str = "") -> str:
     """
     风险等级标注。输入食品配料表，对每个配料标注风险等级（🟢安全/🟡注意/🔴回避/⚪未知），
     并说明风险原因，特别提醒儿童、孕妇等特殊人群的注意事项。
@@ -74,7 +78,10 @@ def check_risk(question: str) -> str:
 
     logger.info(f"工具调用: check_risk, question={question[:80]}...")
     try:
-        result = _risk_chain.invoke({"question": question})
+        full_question = question
+        if chat_history:
+            full_question = f"对话历史：\n{chat_history}\n\n当前问题：{question}"
+        result = _risk_chain.invoke({"question": full_question})
         return result
     except Exception as e:
         logger.error(f"check_risk 调用失败: {e}")
@@ -104,7 +111,7 @@ def compare_foods(food_a: str, food_b: str) -> str:
 
 
 @tool
-def check_allergens(question: str, user_allergens: str = "") -> str:
+def check_allergens(question: str, user_allergens: str = "", chat_history: str = "") -> str:
     """
     过敏原检测。根据用户已知过敏史，检测食品配料表中是否含有危险成分。
     能识别直接匹配、别名匹配和可能的交叉过敏反应。
@@ -118,8 +125,11 @@ def check_allergens(question: str, user_allergens: str = "") -> str:
 
     logger.info(f"工具调用: check_allergens, allergens={user_allergens}")
     try:
+        full_question = question
+        if chat_history:
+            full_question = f"对话历史：\n{chat_history}\n\n当前问题：{question}"
         result = _allergy_chain.invoke({
-            "question": question,
+            "question": full_question,
             "user_allergens": user_allergens or "未提供过敏史",
         })
         return result

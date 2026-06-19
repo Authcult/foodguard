@@ -49,10 +49,9 @@ def route_by_keywords(user_input: str) -> IntentType:
         logger.info(f"路由结果: compare (关键词匹配)")
         return "compare"
 
-    # 过敏类关键词
-    allergy_kw = ["过敏", "过敏原", "致敏", "含", "能吃吗", "我可以吃",
-                  "花生", "牛奶", "鸡蛋", "大豆", "麸质", "海鲜", "坚果",
-                  "不能吃", "敢吃"]
+    # 过敏类关键词（仅意图性关键词，不含食物名，避免误触）
+    allergy_kw = ["过敏", "过敏原", "致敏", "能吃吗", "我可以吃",
+                  "不能吃", "敢吃", "过敏体质", "不耐受"]
     if any(kw in text for kw in allergy_kw):
         # 排除对比场景（"含...多"可能是对比）
         if "哪个含" not in text and "哪个更" not in text:

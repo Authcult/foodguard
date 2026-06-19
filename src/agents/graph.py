@@ -54,6 +54,50 @@ logger = logging.getLogger("foodguard.graph")
 # LLM 实例（build_graph 时注入，用于路由 fallback）
 _llm = None
 
+# 对话历史摘要的最大轮数
+_MAX_HISTORY_ROUNDS = 5
+
+
+def _build_chat_history(messages: list) -> str:
+    """
+    从消息列表中提取最近 N 轮对话历史，生成摘要字符串。
+
+    用于注入到 Chain 的 prompt 中，让 LLM 理解上下文（如追问"那个呢？"）。
+
+    参数:
+        messages: LangGraph messages 列表
+
+    返回:
+        对话历史摘要字符串，如无历史则返回空字符串
+    """
+    if len(messages) <= 1:
+        return ""
+
+    # 取最近 N 轮（每轮 = 1 user + 1 assistant）
+    history_msgs = messages[:-1]  # 排除当前消息
+    recent = history_msgs[-_MAX_HISTORY_ROUNDS * 2:]
+
+    lines = []
+    for msg in recent:
+        if hasattr(msg, "content"):
+            content = msg.content
+        else:
+            content = str(msg)
+        # 截断过长的消息
+        if len(content) > 200:
+            content = content[:200] + "..."
+        lines.append(content)
+
+    return "\n".join(lines) if lines else ""
+
+
+def _extract_user_input(messages: list) -> str:
+    """从消息列表中提取最新用户输入文本"""
+    if not messages:
+        return ""
+    last_msg = messages[-1]
+    return last_msg.content if hasattr(last_msg, "content") else str(last_msg)
+
 
 # ============================================================
 # State 定义
@@ -113,10 +157,14 @@ def router_node(state: AgentState) -> dict:
 def interpret_node(state: AgentState) -> dict:
     """解读节点"""
     messages = state.get("messages", [])
-    user_input = messages[-1].content if hasattr(messages[-1], "content") else str(messages[-1])
+    user_input = _extract_user_input(messages)
+    chat_history = _build_chat_history(messages)
 
     try:
-        output = interpret_additives.invoke({"question": user_input})
+        output = interpret_additives.invoke({
+            "question": user_input,
+            "chat_history": chat_history,
+        })
         return {"current_output": str(output), "error": ""}
     except Exception as e:
         return {"current_output": "", "error": str(e)}
@@ -125,32 +173,70 @@ def interpret_node(state: AgentState) -> dict:
 def risk_node(state: AgentState) -> dict:
     """风险标注节点"""
     messages = state.get("messages", [])
-    user_input = messages[-1].content if hasattr(messages[-1], "content") else str(messages[-1])
+    user_input = _extract_user_input(messages)
+    chat_history = _build_chat_history(messages)
 
     try:
-        output = check_risk.invoke({"question": user_input})
+        output = check_risk.invoke({
+            "question": user_input,
+            "chat_history": chat_history,
+        })
         return {"current_output": str(output), "error": ""}
     except Exception as e:
         return {"current_output": "", "error": str(e)}
+
+
+def _extract_two_foods(user_input: str) -> tuple[str, str]:
+    """
+    尝试从用户输入中提取两个食品的配料表。
+
+    策略：
+      1. 按常见分隔符（换行、"VS"、"和"等）分割
+      2. 如果无法分割，用 LLM 提取
+      3. 兜底：整个输入同时作为 food_a 和 food_b
+
+    返回:
+        (food_a, food_b) 元组
+    """
+    import re
+
+    # 策略1：按常见分隔符分割
+    separators = [
+        r"\n\s*\n",          # 空行
+        r"\s+vs\.?\s+",      # VS / vs.
+        r"\s+pk\s+",         # pk
+        r"[,，]\s*第[一二]款",  # ，第一款...第二款
+    ]
+    for sep in separators:
+        parts = re.split(sep, user_input, maxsplit=1)
+        if len(parts) == 2 and len(parts[0].strip()) > 5 and len(parts[1].strip()) > 5:
+            return parts[0].strip(), parts[1].strip()
+
+    # 策略2：尝试用"和"或"跟"分割（但要求两边都有足够内容）
+    for connector in ["和", "跟", "与"]:
+        if connector in user_input:
+            parts = user_input.split(connector, 1)
+            if len(parts) == 2 and len(parts[0].strip()) > 10 and len(parts[1].strip()) > 10:
+                return parts[0].strip(), parts[1].strip()
+
+    # 兜底：整个输入同时传入
+    return user_input, user_input
 
 
 def compare_node(state: AgentState) -> dict:
     """
     对比分析节点。
 
-    对比场景特殊：用户输入可能包含两个食品的配料表。
-    简单处理：将整个输入作为 food_a 和 food_b 传给 compare chain，
-    让 LLM 自己去解析。未来可以改进为更结构化的输入。
+    尝试从用户输入中提取两个食品的配料表，分别传给 compare chain。
     """
     messages = state.get("messages", [])
-    user_input = messages[-1].content if hasattr(messages[-1], "content") else str(messages[-1])
+    user_input = _extract_user_input(messages)
 
     try:
-        # 简单策略：尝试按"食品A"/"食品B"或"第一款"/"第二款"或空行分割
-        # 如果无法分割，就把整个输入同时作为 food_a 和 food_b（LLM 会自己处理）
+        food_a, food_b = _extract_two_foods(user_input)
         output = compare_foods.invoke({
-            "food_a": user_input,
-            "food_b": user_input,
+            "food_a": food_a,
+            "food_b": food_b,
         })
         return {"current_output": str(output), "error": ""}
     except Exception as e:
@@ -160,7 +246,8 @@ def compare_node(state: AgentState) -> dict:
 def allergy_node(state: AgentState) -> dict:
     """过敏检测节点"""
     messages = state.get("messages", [])
-    user_input = messages[-1].content if hasattr(messages[-1], "content") else str(messages[-1])
+    user_input = _extract_user_input(messages)
+    chat_history = _build_chat_history(messages)
 
     profile = state.get("user_profile", {})
     user_allergens = profile.get("known_allergens", [])
@@ -169,6 +256,7 @@ def allergy_node(state: AgentState) -> dict:
         output = check_allergens.invoke({
             "question": user_input,
             "user_allergens": ", ".join(user_allergens) if user_allergens else "",
+            "chat_history": chat_history,
         })
         return {"current_output": str(output), "error": ""}
     except Exception as e:
@@ -178,7 +266,7 @@ def allergy_node(state: AgentState) -> dict:
 def general_node(state: AgentState) -> dict:
     """一般对话节点（招呼、感谢等，不需要调用 Chain）"""
     messages = state.get("messages", [])
-    user_input = messages[-1].content if hasattr(messages[-1], "content") else str(messages[-1])
+    user_input = _extract_user_input(messages)
 
     # 简单回复，不做 RAG
     greetings = ["你好", "hi", "hello", "嗨", "在吗", "hey"]

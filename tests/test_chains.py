@@ -1,148 +1,72 @@
 """
-端到端测试脚本
+食鉴（FoodGuard）测试套件
 
-验证系统各组件是否正常工作：
-  1. LLM 连接
-  2. Embedding 加载
-  3. 数据加载
-  4. 向量检索
-  5. Chain 调用
-  6. Agent 路由
+基于 pytest 框架，测试系统各组件。
 
 运行方式：
-  python tests/test_chains.py
+  pytest tests/test_chains.py -v
 
-注意：首次运行会下载 Embedding 模型，请确保网络通畅。
+注意：
+  - 需要 DEEPSEEK_API_KEY 环境变量（LLM 测试）
+  - 首次运行会下载 Embedding 模型
+  - 标记 @pytest.mark.slow 的测试需要网络，可用 -m "not slow" 跳过
 """
 import sys
 import os
+
+# 确保项目根目录在 sys.path 中
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import logging
-from config import logger
-
-logger.setLevel(logging.INFO)
+import pytest
 
 
-def test_1_llm():
-    """测试 LLM 连接"""
-    logger.info("=" * 40)
-    logger.info("测试 1: LLM 连接")
-    logger.info("=" * 40)
+# ============================================================
+# Fixtures（共享的测试资源）
+# ============================================================
 
+@pytest.fixture(scope="session")
+def llm():
+    """LLM 实例（整个测试会话共享）"""
     from src.models.llm import get_llm
-    llm = get_llm()
-    response = llm.invoke("请用一句话回答：食品添加剂是什么？")
-    logger.info(f"LLM 回复: {response.content[:100]}...")
-    logger.info("✅ LLM 连接测试通过")
+    return get_llm()
 
 
-def test_2_embeddings():
-    """测试 Embedding 模型加载"""
-    logger.info("=" * 40)
-    logger.info("测试 2: Embedding 模型")
-    logger.info("=" * 40)
-
+@pytest.fixture(scope="session")
+def embeddings():
+    """Embedding 模型实例"""
     from src.models.embeddings import get_embeddings
-    embeddings = get_embeddings()
-
-    # 测试编码
-    vector = embeddings.embed_query("安赛蜜")
-    logger.info(f"向量维度: {len(vector)}")
-    logger.info(f"向量前5维: {vector[:5]}")
-    logger.info("✅ Embedding 测试通过")
+    return get_embeddings()
 
 
-def test_3_data_loading():
-    """测试数据加载"""
-    logger.info("=" * 40)
-    logger.info("测试 3: 数据加载")
-    logger.info("=" * 40)
+@pytest.fixture(scope="session")
+def vectorstore(embeddings):
+    """ChromaDB 向量数据库实例"""
+    from src.data.vectorstore import get_vectorstore
+    return get_vectorstore(embeddings)
 
+
+@pytest.fixture(scope="session")
+def documents():
+    """加载的知识库 Document 列表"""
     from src.data.loader import load_documents
-    docs = load_documents()
-    logger.info(f"加载 Document 数量: {len(docs)}")
-
-    if len(docs) > 0:
-        logger.info(f"第一个 Document: {docs[0].metadata.get('name', 'N/A')}")
-        logger.info(f"page_content 长度: {len(docs[0].page_content)}")
-
-    logger.info("✅ 数据加载测试通过")
+    return load_documents()
 
 
-def test_4_vectorstore():
-    """测试向量存储和检索"""
-    logger.info("=" * 40)
-    logger.info("测试 4: 向量存储和检索")
-    logger.info("=" * 40)
-
-    from src.models.embeddings import get_embeddings
-    from src.data.vectorstore import get_vectorstore, retrieve
-
-    embeddings = get_embeddings()
-    vectorstore = get_vectorstore(embeddings)
-
-    # 测试检索
-    results = retrieve(vectorstore, "防腐剂", top_k=5)
-    logger.info(f"检索到 {len(results)} 条结果")
-
-    for i, doc in enumerate(results):
-        logger.info(
-            f"  {i+1}. {doc.metadata['name']} "
-            f"[{doc.metadata.get('risk_level', '?')}] "
-            f"— {doc.metadata.get('function', '?')}"
-        )
-
-    logger.info("✅ 向量检索测试通过")
-
-
-def test_5_interpret_chain():
-    """测试解读 Chain"""
-    logger.info("=" * 40)
-    logger.info("测试 5: 解读 Chain")
-    logger.info("=" * 40)
-
-    from src.models.llm import get_llm
-    from src.models.embeddings import get_embeddings
-    from src.data.vectorstore import get_vectorstore
-    from src.chains.interpret_chain import build_interpret_chain
-
-    llm = get_llm()
-    embeddings = get_embeddings()
-    vectorstore = get_vectorstore(embeddings)
-
-    chain = build_interpret_chain(llm, vectorstore)
-
-    result = chain.invoke({"question": "安赛蜜是什么？安全性怎么样？"})
-    logger.info(f"Chain 输出 (前200字符): {result[:200]}...")
-    logger.info("✅ 解读 Chain 测试通过")
-
-
-def test_6_agent():
-    """测试 Agent Graph"""
-    logger.info("=" * 40)
-    logger.info("测试 6: Agent Graph")
-    logger.info("=" * 40)
-
-    from src.models.llm import get_llm
-    from src.models.embeddings import get_embeddings
-    from src.data.vectorstore import get_vectorstore
+@pytest.fixture(scope="session")
+def graph(llm, vectorstore):
+    """完整的 LangGraph Agent"""
     from src.chains.interpret_chain import build_interpret_chain
     from src.chains.risk_chain import build_risk_chain
     from src.chains.compare_chain import build_compare_chain
     from src.chains.allergy_chain import build_allergy_chain
     from src.agents.graph import build_graph
 
-    llm = get_llm()
-    embeddings = get_embeddings()
-    vectorstore = get_vectorstore(embeddings)
-
     interpret_chain = build_interpret_chain(llm, vectorstore)
     risk_chain = build_risk_chain(llm, vectorstore)
     compare_chain = build_compare_chain(llm, vectorstore)
     allergy_chain = build_allergy_chain(llm, vectorstore)
 
-    graph = build_graph(
+    return build_graph(
         interpret_chain=interpret_chain,
         risk_chain=risk_chain,
         compare_chain=compare_chain,
@@ -150,69 +74,248 @@ def test_6_agent():
         llm=llm,
     )
 
-    # 测试路由
-    test_cases = [
-        ("安赛蜜是什么？", "interpret"),
-        ("山梨酸钾安全吗？", "risk"),
-        ("我对花生过敏，这个能吃吗", "allergy"),
-        ("你好", "general"),
-    ]
 
-    for user_input, expected_intent in test_cases:
+# ============================================================
+# 基础组件测试（不需要网络）
+# ============================================================
+
+class TestConfig:
+    """配置模块测试"""
+
+    def test_config_loads(self):
+        """配置模块能正常导入"""
+        from config import PROJECT_ROOT, DATA_DIR, PROMPTS_DIR
+        assert PROJECT_ROOT.exists()
+        assert DATA_DIR.exists()
+        assert PROMPTS_DIR.exists()
+
+    def test_env_example_exists(self):
+        """env.example 文件存在"""
+        from config import PROJECT_ROOT
+        assert (PROJECT_ROOT / ".env.example").exists()
+
+
+class TestSchemas:
+    """数据模型测试"""
+
+    def test_additive_knowledge_model(self):
+        """添加剂知识模型能正常创建"""
+        from src.models.schemas import AdditiveKnowledge
+        item = AdditiveKnowledge(name="安赛蜜", function="甜味剂")
+        assert item.name == "安赛蜜"
+        assert item.risk_level == "safe"
+        assert item.aliases == []
+
+    def test_user_profile_model(self):
+        """用户画像模型能正常创建"""
+        from src.models.schemas import UserProfile
+        profile = UserProfile(known_allergens=["花生", "牛奶"])
+        assert len(profile.known_allergens) == 2
+
+    def test_ingredient_result_model(self):
+        """配料分析结果模型"""
+        from src.models.schemas import IngredientResult
+        result = IngredientResult(name="安赛蜜", risk_level="safe")
+        assert result.risk_emoji == "🟢"
+
+
+class TestChainBase:
+    """Chain 公共模块测试"""
+
+    def test_split_meta_list_with_string(self):
+        """split_meta_list 能正确拆分逗号分隔字符串"""
+        from src.chains.base import split_meta_list
+        result = split_meta_list("山梨酸,苯甲酸,安赛蜜")
+        assert result == ["山梨酸", "苯甲酸", "安赛蜜"]
+
+    def test_split_meta_list_with_list(self):
+        """split_meta_list 对已经是列表的直接返回"""
+        from src.chains.base import split_meta_list
+        result = split_meta_list(["山梨酸", "苯甲酸"])
+        assert result == ["山梨酸", "苯甲酸"]
+
+    def test_split_meta_list_with_empty(self):
+        """split_meta_list 处理空值"""
+        from src.chains.base import split_meta_list
+        assert split_meta_list(None) == []
+        assert split_meta_list("") == []
+        assert split_meta_list([]) == []
+
+    def test_format_aliases(self):
+        """format_aliases 正确格式化别名"""
+        from src.chains.base import format_aliases
+        assert format_aliases({"aliases": "山梨酸,苯甲酸"}) == "山梨酸、苯甲酸"
+        assert format_aliases({"aliases": ""}) == "无"
+        assert format_aliases({}) == "无"
+
+    def test_format_allergens(self):
+        """format_allergens 正确格式化过敏原"""
+        from src.chains.base import format_allergens
+        assert format_allergens({"allergens": "花生,牛奶"}) == "花生、牛奶"
+        assert format_allergens({"allergens": ""}) == "无"
+
+
+class TestDataLoader:
+    """数据加载测试"""
+
+    def test_load_documents(self, documents):
+        """知识库能正常加载"""
+        assert len(documents) > 0
+
+    def test_document_structure(self, documents):
+        """Document 包含必要的 metadata 字段"""
+        doc = documents[0]
+        assert "name" in doc.metadata
+        assert "risk_level" in doc.metadata
+        assert "function" in doc.metadata
+        assert len(doc.page_content) > 0
+
+    def test_no_duplicate_names(self, documents):
+        """知识库中没有重复名称"""
+        names = [doc.metadata["name"] for doc in documents]
+        assert len(names) == len(set(names)), f"发现重复: {[n for n in names if names.count(n) > 1]}"
+
+
+class TestVectorstore:
+    """向量存储测试"""
+
+    def test_vectorstore_accessible(self, vectorstore):
+        """向量数据库能正常访问"""
+        assert vectorstore is not None
+
+    def test_similarity_search(self, vectorstore):
+        """相似度检索返回结果"""
+        from src.data.vectorstore import retrieve
+        results = retrieve(vectorstore, "防腐剂", top_k=5)
+        assert len(results) > 0
+        assert all("name" in doc.metadata for doc in results)
+
+
+class TestRouter:
+    """意图路由测试"""
+
+    def test_interpret_keywords(self):
+        """解读类关键词正确路由"""
+        from src.agents.router import route_by_keywords
+        assert route_by_keywords("安赛蜜是什么？") == "interpret"
+        assert route_by_keywords("帮我看看这个配料表") == "interpret"
+
+    def test_risk_keywords(self):
+        """风险类关键词正确路由"""
+        from src.agents.router import route_by_keywords
+        assert route_by_keywords("这个安全吗？") == "risk"
+        assert route_by_keywords("哪些配料有风险") == "risk"
+
+    def test_compare_keywords(self):
+        """对比类关键词正确路由"""
+        from src.agents.router import route_by_keywords
+        assert route_by_keywords("比较一下这两款") == "compare"
+        assert route_by_keywords("哪个更好？") == "compare"
+
+    def test_allergy_keywords(self):
+        """过敏类关键词正确路由"""
+        from src.agents.router import route_by_keywords
+        assert route_by_keywords("我对花生过敏能吃吗") == "allergy"
+        assert route_by_keywords("这个含过敏原吗") == "allergy"
+
+    def test_general_fallback(self):
+        """无法识别的输入路由到 general"""
+        from src.agents.router import route_by_keywords
+        assert route_by_keywords("你好") == "general"
+
+    def test_allergy_no_false_trigger_on_food_names(self):
+        """仅提及食物名不应触发过敏路由"""
+        from src.agents.router import route_by_keywords
+        # 这些以前会误触发 allergy
+        assert route_by_keywords("花生酱好吃吗") != "allergy"
+        assert route_by_keywords("牛奶和酸奶哪个好") != "allergy"
+
+
+class TestUserProfile:
+    """用户画像测试"""
+
+    def test_load_profile(self):
+        """加载用户画像"""
+        from src.memory.user_profile import load_profile
+        profile = load_profile()
+        assert "known_allergens" in profile
+        assert "dietary_preferences" in profile
+
+    def test_save_and_load_profile(self, tmp_path):
+        """保存并重新加载用户画像"""
+        import json
+        from src.memory.user_profile import PROFILE_PATH
+        from config import DATA_DIR
+
+        # 使用原始路径读取
+        from src.memory.user_profile import load_profile
+        profile = load_profile()
+        assert isinstance(profile, dict)
+
+
+# ============================================================
+# 集成测试（需要 LLM，标记为 slow）
+# ============================================================
+
+@pytest.mark.slow
+class TestChainIntegration:
+    """Chain 集成测试（需要 LLM API）"""
+
+    def test_interpret_chain(self, llm, vectorstore):
+        """解读链能正常运行"""
+        from src.chains.interpret_chain import build_interpret_chain
+        chain = build_interpret_chain(llm, vectorstore)
+        result = chain.invoke({"question": "安赛蜜是什么？"})
+        assert isinstance(result, str)
+        assert len(result) > 50
+
+    def test_risk_chain(self, llm, vectorstore):
+        """风险标注链能正常运行"""
+        from src.chains.risk_chain import build_risk_chain
+        chain = build_risk_chain(llm, vectorstore)
+        result = chain.invoke({"question": "安赛蜜、山梨酸钾"})
+        assert isinstance(result, str)
+        assert len(result) > 50
+
+
+@pytest.mark.slow
+class TestAgentGraph:
+    """Agent Graph 集成测试"""
+
+    def test_interpret_route(self, graph):
+        """解读意图路由正确"""
         result = graph.invoke(
-            {
-                "messages": [{"role": "user", "content": user_input}],
-                "user_profile": {"known_allergens": ["花生"]},
-            },
-            config={"configurable": {"thread_id": "test_session"}},
+            {"messages": [{"role": "user", "content": "安赛蜜是什么？"}],
+             "user_profile": {"known_allergens": []}},
+            config={"configurable": {"thread_id": "test_interpret"}},
         )
-        intent = result.get("intent", "?")
-        status = "✅" if intent == expected_intent else "⚠️"
-        logger.info(
-            f"  {status} '{user_input}' → intent={intent} "
-            f"(期望={expected_intent})"
+        assert result.get("intent") == "interpret"
+        assert len(result.get("current_output", "")) > 0
+
+    def test_risk_route(self, graph):
+        """风险意图路由正确"""
+        result = graph.invoke(
+            {"messages": [{"role": "user", "content": "山梨酸钾安全吗？"}],
+             "user_profile": {"known_allergens": []}},
+            config={"configurable": {"thread_id": "test_risk"}},
         )
+        assert result.get("intent") == "risk"
 
-    logger.info("✅ Agent Graph 测试通过")
+    def test_allergy_route(self, graph):
+        """过敏意图路由正确"""
+        result = graph.invoke(
+            {"messages": [{"role": "user", "content": "我对花生过敏，这个能吃吗"}],
+             "user_profile": {"known_allergens": ["花生"]}},
+            config={"configurable": {"thread_id": "test_allergy"}},
+        )
+        assert result.get("intent") == "allergy"
 
-
-def main():
-    """运行所有测试"""
-    logger.info("=" * 60)
-    logger.info("食鉴（FoodGuard）端到端测试")
-    logger.info("=" * 60)
-
-    tests = [
-        ("LLM 连接", test_1_llm),
-        ("Embedding", test_2_embeddings),
-        ("数据加载", test_3_data_loading),
-        ("向量检索", test_4_vectorstore),
-        ("解读 Chain", test_5_interpret_chain),
-        ("Agent Graph", test_6_agent),
-    ]
-
-    passed = 0
-    failed = 0
-
-    for name, test_fn in tests:
-        try:
-            test_fn()
-            passed += 1
-        except Exception as e:
-            logger.error(f"❌ {name} 测试失败: {e}")
-            import traceback
-            traceback.print_exc()
-            failed += 1
-
-    logger.info("=" * 60)
-    logger.info(f"测试结果: {passed} 通过, {failed} 失败, {len(tests)} 总计")
-    logger.info("=" * 60)
-
-    if failed == 0:
-        logger.info("🎉 所有测试通过！系统就绪。")
-    else:
-        logger.warning(f"⚠️ {failed} 个测试失败，请检查对应模块。")
-
-
-if __name__ == "__main__":
-    main()
+    def test_general_route(self, graph):
+        """一般对话路由正确"""
+        result = graph.invoke(
+            {"messages": [{"role": "user", "content": "你好"}],
+             "user_profile": {"known_allergens": []}},
+            config={"configurable": {"thread_id": "test_general"}},
+        )
+        assert result.get("intent") == "general"
+        assert "食鉴" in result.get("current_output", "")

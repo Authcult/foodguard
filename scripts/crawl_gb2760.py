@@ -205,11 +205,8 @@ def crawl_all_categories() -> list[dict]:
         logger.info(f"  找到 {len(items)} 个添加剂")
 
         # 为每个添加剂尝试获取详情页（如果有链接的话）
-        for item in items:
-            # 尝试从页面中找详情链接
-            # 食品伙伴网的结构通常是 <a href="...">名称</a>
-            # 这里我们主要依赖列表页的数据
-            pass
+        # 食品伙伴网的详情链接通常在列表页的 <a> 标签中
+        # 当前主要依赖列表页数据，详情页抓取作为未来扩展
 
         all_additives.extend(items)
         time.sleep(REQUEST_DELAY)

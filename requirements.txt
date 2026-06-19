@@ -3,10 +3,12 @@ langchain>=0.3.0
 langchain-core>=0.3.0
 langchain-openai>=0.2.0
 langchain-community>=0.3.0
+langchain-ollama>=0.3.0
 langgraph>=0.2.0
 
 # ===== 向量数据库 =====
 chromadb>=0.5.0
+langchain-chroma>=0.2.0
 
 # ===== Embedding 模型 =====
 sentence-transformers>=3.0.0
@@ -14,6 +16,12 @@ huggingface-hub>=0.20.0
 
 # ===== 前端 =====
 streamlit>=1.30.0
+fastapi>=0.110.0
+uvicorn>=0.27.0
+sse-starlette>=2.0.0
+
+# ===== OCR =====
+rapidocr_onnxruntime>=1.2.0
 
 # ===== 数据采集 =====
 beautifulsoup4>=4.12.0

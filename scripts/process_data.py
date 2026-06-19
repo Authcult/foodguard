@@ -42,6 +42,32 @@ def save_json(data, filepath: Path) -> None:
     logger.info(f"已保存: {filepath}")
 
 
+def deduplicate_by_name(items: list[dict]) -> list[dict]:
+    """
+    按名称去重，保留首次出现的条目。
+
+    原始数据中可能存在重复条目（如同一添加剂出现多次），
+    此函数确保每个名称只保留一条记录。
+
+    参数:
+        items: 原始条目列表
+
+    返回:
+        去重后的列表
+    """
+    seen = set()
+    result = []
+    for item in items:
+        name = item.get("name", "")
+        if name and name not in seen:
+            seen.add(name)
+            result.append(item)
+    removed = len(items) - len(result)
+    if removed > 0:
+        logger.info(f"去重: 移除 {removed} 条重复条目")
+    return result
+
+
 def merge_data(
     crawled: list[dict],
     annotated: list[dict],
@@ -50,16 +76,14 @@ def merge_data(
     合并爬虫数据和人工标注数据。
 
     规则：
+      - 先对两个数据源各自去重
       - 以人工标注数据为准（有更丰富的 risk_level、risk_reason 等）
       - 爬虫数据补充 usages 等信息
       - 按名称去重
     """
-    # 建立人工标注数据的索引
-    annot_index = {}
-    for item in annotated:
-        name = item.get("name", "")
-        if name:
-            annot_index[name] = item
+    # 先各自去重
+    crawled = deduplicate_by_name(crawled)
+    annotated = deduplicate_by_name(annotated)
 
     # 合并结果
     result = []
@@ -70,7 +94,6 @@ def merge_data(
         name = item.get("name", "")
         if name and name not in seen_names:
             seen_names.add(name)
-            # 确保字段完整
             result.append(ensure_all_fields(item))
 
     # 再处理爬虫数据中人工标注没有的
@@ -78,7 +101,6 @@ def merge_data(
         name = item.get("name", "")
         if name and name not in seen_names:
             seen_names.add(name)
-            # 为爬虫数据补充默认字段
             enriched = enrich_crawled_item(item)
             result.append(enriched)
 

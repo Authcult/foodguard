@@ -8,19 +8,12 @@ import logging
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from config import PROMPTS_DIR
+from src.chains.base import load_prompt_template, format_aliases, format_allergens
 
 logger = logging.getLogger("foodguard.allergy_chain")
 
 
-def _load_prompt_template(filename: str) -> str:
-    """从 prompts 目录加载 Prompt 模板"""
-    prompt_path = PROMPTS_DIR / filename
-    if prompt_path.exists():
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
-
-    return """你是一位过敏医学专家。根据用户的过敏史和食品配料表，检测过敏风险。
+_DEFAULT_ALLERGY_PROMPT = """你是一位过敏医学专家。根据用户的过敏史和食品配料表，检测过敏风险。
 
 用户过敏史：{user_allergens}
 知识库信息：{context}
@@ -53,7 +46,7 @@ def build_allergy_chain(llm, vectorstore):
         search_kwargs={"k": 10},
     )
 
-    prompt_template = _load_prompt_template("allergy_check.md")
+    prompt_template = load_prompt_template("allergy_check.md", _DEFAULT_ALLERGY_PROMPT)
     prompt = ChatPromptTemplate.from_template(prompt_template)
 
     def format_docs(docs):
@@ -65,8 +58,8 @@ def build_allergy_chain(llm, vectorstore):
             formatted.append(
                 f"【{meta.get('name', '')}】"
                 f"功能:{meta.get('function', '')} | "
-                f"别名:{'、'.join(meta.get('aliases', []))} | "
-                f"过敏原:{'、'.join(meta.get('allergens', [])) or '无'} | "
+                f"别名:{format_aliases(meta)} | "
+                f"过敏原:{format_allergens(meta)} | "
                 f"风险:{meta.get('risk_level', '')}"
             )
         return "\n".join(formatted)

@@ -87,13 +87,5 @@ class UserProfile(BaseModel):
     # 家庭成员类型示例: "儿童", "孕妇", "老人"
 
 
-# ============================================================
-# Agent 状态（LangGraph State 定义）
-# ============================================================
-class AgentState(BaseModel):
-    """LangGraph Agent 的核心状态"""
-    messages: list = Field(default_factory=list, description="对话消息历史")
-    intent: str = Field(default="", description="识别出的用户意图")
-    user_profile: UserProfile = Field(default_factory=UserProfile, description="用户画像")
-    analysis_result: Optional[AnalysisResult] = Field(default=None, description="分析结果")
-    error: str = Field(default="", description="错误信息")
+# 注意：LangGraph 的 AgentState 使用 TypedDict 定义在 src/agents/graph.py 中，
+# 此处不再定义 Pydantic 版本，避免重复和混淆。

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食鉴 FoodGuard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">食鉴</span>
+            </div>
+            <span class="logo-sub">FoodGuard</span>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>我的过敏史</h3>
+            <div class="allergen-list" id="allergenList">
+                <!-- JS 动态生成 -->
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>功能</h3>
+            <ul class="feature-list">
+                <li>🔍 <span>解读配料</span></li>
+                <li>⚠️ <span>风险标注</span></li>
+                <li>⚡ <span>过敏检测</span></li>
+                <li>📊 <span>对比分析</span></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="model-info">
+                <span>LLM: Qwen3-4B</span>
+                <span>Embedding: BGE-M3</span>
+                <span>DB: ChromaDB</span>
+            </div>
+            <button class="btn-clear" id="btnClear">清除对话</button>
+        </div>
+    </aside>
+
+    <!-- 主区域 -->
+    <main class="main">
+        <!-- 顶部状态栏 -->
+        <header class="topbar">
+            <button class="btn-menu" id="btnMenu">☰</button>
+            <h1>食鉴 FoodGuard</h1>
+            <span class="topbar-sub">食品配料智能分析助手</span>
+        </header>
+
+        <!-- 消息列表 -->
+        <div class="chat-container" id="chatContainer">
+            <!-- 欢迎消息 -->
+            <div class="welcome" id="welcome">
+                <div class="welcome-icon">🛡️</div>
+                <h2>欢迎使用食鉴</h2>
+                <p>输入食品配料表或提问，我来帮你分析</p>
+                <div class="welcome-examples">
+                    <button class="example-btn" data-msg="安赛蜜和山梨酸钾是什么？">🔍 安赛蜜和山梨酸钾是什么？</button>
+                    <button class="example-btn" data-msg="配料：水、白砂糖、安赛蜜、柠檬酸、山梨酸钾，这些安全吗？">⚠️ 这些配料安全吗？</button>
+                    <button class="example-btn" data-msg="我对花生过敏，这个能吃吗？">⚡ 花生过敏能吃吗？</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 状态条 -->
+        <div class="status-bar" id="statusBar">
+            <div class="status-steps">
+                <span class="step" id="stepIntent">🔍 识别意图</span>
+                <span class="step-arrow">→</span>
+                <span class="step" id="stepQuery">📚 查询知识库</span>
+                <span class="step-arrow">→</span>
+                <span class="step" id="stepGenerate">✍️ 生成回答</span>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="input-area">
+            <div class="input-wrapper">
+                <button class="btn-upload" id="btnUpload" title="上传配料表图片">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+                </button>
+                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <textarea
+                    id="userInput"
+                    placeholder="输入配料表或提问（如：安赛蜜安全吗？）"
+                    rows="1"
+                    maxlength="2000"
+                ></textarea>
+                <button class="btn-send" id="btnSend">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span>食鉴基于 AI 和 GB2760-2024 数据库，仅供参考</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

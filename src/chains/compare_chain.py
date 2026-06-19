@@ -8,19 +8,12 @@ import logging
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from config import PROMPTS_DIR
+from src.chains.base import load_prompt_template
 
 logger = logging.getLogger("foodguard.compare_chain")
 
 
-def _load_prompt_template(filename: str) -> str:
-    """从 prompts 目录加载 Prompt 模板"""
-    prompt_path = PROMPTS_DIR / filename
-    if prompt_path.exists():
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
-
-    return """你是食品对比专家。请对比以下两款食品的配料表。
+_DEFAULT_COMPARE_PROMPT = """你是食品对比专家。请对比以下两款食品的配料表。
 
 知识库信息：
 {context}
@@ -55,7 +48,7 @@ def build_compare_chain(llm, vectorstore):
         search_kwargs={"k": 15},
     )
 
-    prompt_template = _load_prompt_template("compare.md")
+    prompt_template = load_prompt_template("compare.md", _DEFAULT_COMPARE_PROMPT)
     prompt = ChatPromptTemplate.from_template(prompt_template)
 
     def format_docs(docs):
